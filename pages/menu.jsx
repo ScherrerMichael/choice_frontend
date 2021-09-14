@@ -141,10 +141,10 @@ function getCatagoryFoods(cat, data) {
 }
 
 export async function getStaticProps(content) {
+    try{
     const res = await fetch(process.env.API_ROUTE + '/foodItems')
     const data = await res.json()
     data.sort(comapare_name);
-    data
     //   console.log(data);
     const appetizers = getCatagoryFoods("Appetizer", data);
     const entrees = getCatagoryFoods("Entree", data);
@@ -153,10 +153,8 @@ export async function getStaticProps(content) {
     const teriyaki = getCatagoryFoods("Teriyaki", data)
     const specials = getCatagoryFoods("Specials", data)
 
-    if (!data) {
-        return {
-            notfound: true,
-        }
+    if (!data){
+        return {notFound: true};
     }
 
     return {
@@ -170,5 +168,8 @@ export async function getStaticProps(content) {
             specials,
 
         }}, //will be passed to the page
+    }
+    } catch(e) {
+        return {notFound: true};
     }
 }
