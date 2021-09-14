@@ -10,11 +10,6 @@ export default function Menu({ data }) {
     return (
         <>
             {/* <Header></Header> */}
-            <ul>
-                {data.entrees.map((food, i) => (
-                    <li key={i}>{food.name}, {food.price}</li>
-                ))}
-            </ul>
             <div className="menu-wrapper backgound-img">
                 <div className="menu-left">
                     <div className="item-groups">

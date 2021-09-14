@@ -1,0 +1,17 @@
+.menu-wrapper{
+    background-color:firebrick;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.menu-left{
+    background-color: aquamarine;
+    display: block;
+}
+.menu-middle{
+    background-color: gainsboro;
+}
+.menu-right{
+    background-color: goldenrod;
+}
