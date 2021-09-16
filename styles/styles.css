@@ -1,3 +1,77 @@
+/* Conainer */
+.container{
+    width: 100%;
+}
+/* Nav Bar */
+/* Elements */
+.logo{
+    height: 50px;
+    display: inline-block;
+}
+
+
+li {
+    padding: 10px 0;
+    margin-left: 25px;
+    /* float: left; */
+    display: block;
+}
+
+button {
+    font-size: 30px;
+    margin-right: 30px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    float: right;
+}
+
+/* Class */
+.navBar {
+    width: 100%;
+    background-color: #111;
+    color: white;
+    height: max-content;
+}
+
+.links {
+    display: none;
+  /* height: 0; */
+  /* overflow: hidden; */
+  list-style-type: none;
+  font-weight: bold;
+}
+
+.show-nav {
+    /* height: 120px; */
+    display: block;
+}
+
+/* Media screen size */
+@media screen and (min-width: 768px) {
+    .nav-links{
+        height: 50px;
+        display:inline-flex;
+    }
+
+    button {
+        display: none;
+    }
+
+    .links {
+        height: auto;
+        float: left;
+        display: flex;
+    }
+
+    li {
+        padding: 0 15px;
+    }
+}
+/* Menu */
+
 .menu-wrapper{
     /* background-color:firebrick; */
     display: grid;
@@ -18,9 +92,7 @@
     /* background-color: aqua; */
 }
 .button{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 20px;
+    margin-bottom: 20px;
     border: none;
     background: transparent;
     cursor:pointer;
