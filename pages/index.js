@@ -20,7 +20,6 @@ export default function Home({ data }) {
       <div className="banner">
         banner
       </div>
-        <div>{process.env.API_ROUTE + "wadwdawd"}</div>
       <div className="landing-wrapper">
         <div className="landing-left">landing left</div>
         <div className="landing-right">
@@ -39,9 +38,9 @@ export default function Home({ data }) {
             <ButtonBack>Back</ButtonBack>
             <ButtonNext>Next</ButtonNext>
           </CarouselProvider>
-          <div>
-          {/* <MapContainer/> */}
-          </div>
+          <div>Location</div>
+          <MapContainer/>
+          <div>Hours</div>
         </div>
       </div>
       <Footer />

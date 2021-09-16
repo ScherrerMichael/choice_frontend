@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
+import getConfig from 'next/config'
+
+const {publicRuntimeConfig} = getConfig()
+const {MAPS_API_KEY} = publicRuntimeConfig
 
 const mapStyles = {
-  width: '100%',
-  height: '100%'
+  // width: '50%',
+  height: '100%',
+  // padding: '20px'
 };
+
+const containerStyle = {
+  width: '100%',
+  height: '300px',
+  position: 'relative'
+}
 
 export class MapContainer extends Component {
   render() {
     return (
       <Map
+        containerStyle={containerStyle}
+        className="map"
         google={this.props.google}
         zoom={14}
         style={mapStyles}
@@ -25,5 +38,5 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: process.env.MAPS_API_KEY
+  apiKey: MAPS_API_KEY
 })(MapContainer);

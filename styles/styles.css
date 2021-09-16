@@ -84,7 +84,7 @@ li a{
 /* Landing Page */
 .banner{
     background-color: wheat;
-    height: 600px;
+    height: 920px;
     margin-bottom: 10px;
 }
 
@@ -105,23 +105,20 @@ li a{
 .landing-right{
     grid-column: 4 / 6;
     background-color: chocolate;
-    display: grid;
-    grid-template-columns: 100%;
-    gap: 10px;
-    grid-auto-rows: minmax(33.3%, auto);
 }
 
 .carosel{
     background-color: tomato;
-    height: 100px !important;
+    height: 300px !important;
+    margin-bottom: 10px;
 }
 
 .carosel-slider{
     height: 100px;
 }
 
-.location{
-    background-color: violet;
+.map{
+    width: 100px;
 }
 
 
