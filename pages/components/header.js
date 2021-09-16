@@ -1,4 +1,5 @@
 import React, { Component, createRef } from 'react';
+import Link from 'next/link'
 
 class Header extends Component {
     state = {
@@ -10,15 +11,27 @@ class Header extends Component {
     render() {
         return (<>
             <div className="navBar">
-                <button onClick={this.Toggle}>
+                <button className="hamburger"onClick={this.Toggle}>
                     {/* <FaAlignRight /> */}
                     placeholder
                 </button>
                 <div className="logo" href="#">Choice</div>
                 <ul className={this.state.toggle ? "nav-links show-nav" : "nav-links"}>
-                    <li className={this.state.toggle? "links show-nav" : "links"} href="#">Home</li>
-                    <li className={this.state.toggle? "links show-nav" : "links"} href="#">About us</li>
-                    <li className={this.state.toggle? "links show-nav" : "links"} href="#">Contact</li>
+                    <li className={this.state.toggle ? "links show-nav" : "links"} href="#">
+                        <Link href="/menu">
+                            <a>Menu</a>
+                        </Link>
+                    </li>
+                    <li className={this.state.toggle ? "links show-nav" : "links"} href="#">
+                        <Link href="/events">
+                            <a>Events</a>
+                        </Link>
+                        </li>
+                    <li className={this.state.toggle ? "links show-nav" : "links"} href="#">
+                        <Link href="/Contact">
+                            <a>Contact</a>
+                        </Link>
+                        </li>
                 </ul>
             </div>
         </>
