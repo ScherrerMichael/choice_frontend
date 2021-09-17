@@ -99,6 +99,7 @@ li a{
 
 .landing-left{
     grid-column: 1 / 4;
+    grid-row: 1 / 5;
     background-color: chartreuse;
 }
 
@@ -109,19 +110,32 @@ li a{
 
 .carosel{
     background-color: tomato;
-    height: 300px !important;
     margin-bottom: 10px;
 }
 
+.car-img{
+    display: none;
+}
+
 .carosel-slider{
-    height: 100px;
+    width: 100%;
+    height: 300px;
+    z-index: 2;
+}
+
+.map-wrapper{
+    grid-column: 4 / 6;
+    background-color: aqua;
 }
 
 .map{
     width: 100px;
 }
 
-
+.schedule-wrapper{
+    grid-column: 4 / 6;
+    background-color: burlywood;
+}
 
 /* Menu */
 

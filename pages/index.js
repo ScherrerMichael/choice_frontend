@@ -1,17 +1,12 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Footer from './components/footer'
 import Header from './components/header'
 import React from 'react';
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
 import MapContainer from './components/map';
+import Teriyaki1 from '../public/Teriyaki1.jpg'
+import Teriyaki2 from '../public/Teriyaki2.jpg'
+import Teriyaki3 from '../public/Teriyaki3.jpg'
 
 export default function Home({ data }) {
   return (
@@ -23,25 +18,17 @@ export default function Home({ data }) {
       <div className="landing-wrapper">
         <div className="landing-left">landing left</div>
         <div className="landing-right">
-          <CarouselProvider
-            className="carosel"
-            naturalSlideWidth={100}
-            naturalSlideHeight={100}
-            isPlaying={true}
-            totalSlides={3}
-          >
-            <Slider className="carosel-slider">
-              <Slide index={0}>I am the first Slide.</Slide>
-              <Slide index={1}>I am the second Slide.</Slide>
-              <Slide index={2}>I am the third Slide.</Slide>
-            </Slider>
-            <ButtonBack>Back</ButtonBack>
-            <ButtonNext>Next</ButtonNext>
-          </CarouselProvider>
-          <div>Location</div>
-          <MapContainer/>
-          <div>Hours</div>
+          <div className="carosel-wrapper">
+            images
+          </div>
         </div>
+          <div className="map-wrapper">
+            <div>Location</div>
+            <MapContainer />
+          </div>
+          <div className="schedule-wrapper">
+            schedule
+          </div>
       </div>
       <Footer />
     </div>
