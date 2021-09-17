@@ -10,7 +10,10 @@ html, body{
 
 /* Nav Bar */
 .logo{
-    /* height: 50px; */
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 80px;
+    width: 80px;
     display: inline-block;
 }
 
@@ -40,7 +43,7 @@ li a{
     width: 100%;
     background-color: #111;
     color: white;
-    height: 60px;
+    height: 160px;
 }
 
 .links {
@@ -83,16 +86,33 @@ li a{
 }
 /* Landing Page */
 .banner{
+    background-image: url("../public/beer-tap.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
     background-color: wheat;
     height: 920px;
     margin-bottom: 10px;
 }
 
+.banner-title-wrapper{
+    border-radius: 10px;
+    color: whitesmoke;
+    background-color: black;
+    position: absolute;
+    width: 70%;
+    height: 40%;
+    top: 15%;
+    left: 20%;
+    margin: 0;
+    text-align: center;
+}
+
 .landing-wrapper{
     height: 1000px;
-    background-color: cadetblue;
+    /* background-color: whitesmoke; */
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 }
@@ -100,41 +120,62 @@ li a{
 .landing-left{
     grid-column: 1 / 4;
     grid-row: 1 / 5;
-    background-color: chartreuse;
+    background-color: whitesmoke;
 }
 
 .landing-right{
+    height: 100px;
     grid-column: 4 / 6;
-    background-color: chocolate;
-}
-
-.carosel{
-    background-color: tomato;
-    margin-bottom: 10px;
-}
-
-.car-img{
-    display: none;
-}
-
-.carosel-slider{
-    width: 100%;
-    height: 300px;
-    z-index: 2;
+    grid-row: 1;
+    background-color: whitesmoke;
 }
 
 .map-wrapper{
+    position: relative;
     grid-column: 4 / 6;
-    background-color: aqua;
+    grid-row: 2 / 4;
+    background-color: whitesmoke;
+    display: grid;
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
 }
 
 .map{
-    width: 100px;
+    position: relative;
+}
+
+.location{
+    /* background-color: yellow; */
 }
 
 .schedule-wrapper{
+    position: relative;
     grid-column: 4 / 6;
-    background-color: burlywood;
+    grid-row: 4 / 5;
+    background-color: whitesmoke;
+}
+
+.schedule{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    height: 80%;
+    width: 80%;
+    /* background-color: violet; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: 30px;
+}
+
+.schedule .day{
+    /* background-color: thistle; */
+    grid-column: 1;
+}
+
+.schedule .time{
+    /* background-color: yellowgreen; */
+    grid-column: 2;
 }
 
 /* Menu */

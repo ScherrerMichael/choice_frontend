@@ -1,5 +1,7 @@
 import React, { Component, createRef } from 'react';
 import Link from 'next/link'
+import Image from 'next/image'
+import logo from '../../public/logo.png'
 
 class Header extends Component {
     state = {
@@ -15,7 +17,9 @@ class Header extends Component {
                     {/* <FaAlignRight /> */}
                     placeholder
                 </button>
-                <div className="logo" href="#">Choice</div>
+                <div className="logo" href="/">
+                    <Image src={logo}></Image>
+                </div>
                 <ul className={this.state.toggle ? "nav-links show-nav" : "nav-links"}>
                     <li className={this.state.toggle ? "links show-nav" : "links"} href="#">
                         <Link href="/menu">
