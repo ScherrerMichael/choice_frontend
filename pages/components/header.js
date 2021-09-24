@@ -5,20 +5,41 @@ import logo from '../../public/logo.png'
 
 class Header extends Component {
     state = {
-        toggle: false
+        toggle: false,
+        scrolled: false
     }
+
+    componentDidMount(){
+        window.addEventListener('scroll', this.listenToScroll);
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('scroll', this.listenToScroll);
+    }
+
+    listenToScroll = () => {
+        if(window.scrollY > 400){
+            this.setState({scrolled: true})
+        } else {
+            this.setState({scrolled: false})
+        }
+    }
+
     Toggle = () => {
         this.setState({ toggle: !this.state.toggle })
     }
     render() {
         return (<>
-            <div className="navBar">
+            <div className={this.state.scrolled? 'navBar-scrolled': 'navBar'}>
                 <button className="hamburger"onClick={this.Toggle}>
                     {/* <FaAlignRight /> */}
                     placeholder
                 </button>
                 <div className="logo" href="/">
-                    <Image src={logo}></Image>
+                    <Image 
+                    src={logo}
+                    layout='fill'
+                    ></Image>
                 </div>
                 <ul className={this.state.toggle ? "nav-links show-nav" : "nav-links"}>
                     <li className={this.state.toggle ? "links show-nav" : "links"} href="#">
