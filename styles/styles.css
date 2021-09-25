@@ -10,29 +10,8 @@ html, body{
 }
 
 /* Nav Bar */
-.logo{
-    position: relative;
-    margin-top: 10px;
-    margin-left: 20px;
-    height: 80%;
-    width: 12%;
-    display: inline-block;
-}
-
-.logo-scrolled
-{
-    /* todo */
-}
-
-
-li {
-    margin-left: 25px;
-    display: block;
-}
-
-li a{
-    text-decoration: none;
-    color: whitesmoke;
+.hidden{
+    display: none;
 }
 
 .hamburger {
@@ -50,39 +29,49 @@ li a{
     width: 100%;
     background-color: #111;
     color: white;
-    height: 160px;
+    min-height: 40px;
+    max-height: 200px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    overflow-y: hidden;
 }
 
-.navBar-scrolled{
-    width: 100%;
-    opacity: 0.5;
-    background-color: #111;
-    color: white;
-    height: 80px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.nav-scrolled{
+    /* height: 40px !important; */
 }
 
-.links {
+.nav-links{
     display: none;
-  list-style-type: none;
+    position: sticky;
+    margin-top: 40px;
+    width: auto;
+}
+
+.link{
+    padding: 10px;
+}
+
+.link a {
+    color: whitesmoke;
+    text-decoration: none;
   font-weight: bold;
+  width: 100%;
 }
 
 .show-nav {
-    /* height: 120px; */
     display: block;
 }
 
 /* Media screen size */
 @media screen and (min-width: 768px) {
+.nav-scrolled{
+    height: 40px !important;
+}
     .nav-links{
         position: absolute;
-        right: 20px;
+        right: 0;
+        margin-top: 0px;
         display:inline-flex;
     }
 
@@ -93,10 +82,6 @@ li a{
     .links {
         height: auto;
         display: flex;
-    }
-
-    li {
-        /* padding: 0 15px; */
     }
 }
 /* Footer */
@@ -109,11 +94,17 @@ li a{
 .banner{
     background-image: url("../public/beer-tap.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     position: relative;
     background-color: wheat;
     height: 920px;
     margin-bottom: 10px;
+}
+
+.logo{
+    margin-top: 20px !important;
+    min-height: 50% !important;
+    min-width: 50% !important;
 }
 
 .banner-title-wrapper{

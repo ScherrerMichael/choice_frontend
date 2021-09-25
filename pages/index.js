@@ -8,6 +8,7 @@ import Teriyaki1 from '../public/Teriyaki1.jpg'
 import Teriyaki2 from '../public/Teriyaki2.jpg'
 import Teriyaki3 from '../public/Teriyaki3.jpg'
 import beer from '../public/beer-tap.jpg'
+import logo from '../public/logo.png'
 import Carousel from './components/carousel'
 
 export default function Home({ data }) {
@@ -15,7 +16,13 @@ export default function Home({ data }) {
     <div className="container">
       <Header />
       <div className="banner">
-        <h1 className="banner-title-wrapper">choice deli</h1>
+        <h1 className="banner-title-wrapper">
+                    <Image
+                        className="logo"
+                        src={logo}
+                        alt="Logo of Choice Deli"
+                    ></Image>
+          </h1>
       </div>
       <div className="landing-wrapper">
         <div className="landing-left">landing left</div>

@@ -9,19 +9,19 @@ class Header extends Component {
         scrolled: false
     }
 
-    componentDidMount(){
+    componentDidMount() {
         window.addEventListener('scroll', this.listenToScroll);
     }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
         window.removeEventListener('scroll', this.listenToScroll);
     }
 
     listenToScroll = () => {
-        if(window.scrollY > 400){
-            this.setState({scrolled: true})
+        if (window.scrollY > 400) {
+            this.setState({ scrolled: true })
         } else {
-            this.setState({scrolled: false})
+            this.setState({ scrolled: false })
         }
     }
 
@@ -30,34 +30,27 @@ class Header extends Component {
     }
     render() {
         return (<>
-            <div className={this.state.scrolled? 'navBar-scrolled': 'navBar'}>
-                <button className="hamburger"onClick={this.Toggle}>
-                    {/* <FaAlignRight /> */}
+            <div className={this.state.scrolled ? 'navBar nav-scrolled' : 'navBar'}>
+                <button className="hamburger" onClick={this.Toggle}>
                     placeholder
                 </button>
-                <div className="logo" href="/">
-                    <Image 
-                    src={logo}
-                    layout='fill'
-                    ></Image>
+            <div className={this.state.toggle? "nav-links show-nav" : "nav-links"}>
+                <div className="link" href="#">
+                    <Link href="/menu">
+                        <a>Menu</a>
+                    </Link>
                 </div>
-                <ul className={this.state.toggle ? "nav-links show-nav" : "nav-links"}>
-                    <li className={this.state.toggle ? "links show-nav" : "links"} href="#">
-                        <Link href="/menu">
-                            <a>Menu</a>
-                        </Link>
-                    </li>
-                    <li className={this.state.toggle ? "links show-nav" : "links"} href="#">
-                        <Link href="/events">
-                            <a>Events</a>
-                        </Link>
-                        </li>
-                    <li className={this.state.toggle ? "links show-nav" : "links"} href="#">
-                        <Link href="/Contact">
-                            <a>Contact</a>
-                        </Link>
-                        </li>
-                </ul>
+                <div className="link" href="#">
+                    <Link href="/events">
+                        <a>Events</a>
+                    </Link>
+                </div>
+                <div className="link" href="#">
+                    <Link href="/Contact">
+                        <a>Contact</a>
+                    </Link>
+                </div>
+            </div>
             </div>
         </>
         );
