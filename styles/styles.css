@@ -29,12 +29,12 @@ html, body{
     width: 100%;
     background-color: #111;
     color: white;
-    min-height: 40px;
-    max-height: 200px;
+    min-height: 55px;
+    max-height: min-content;
     position: sticky;
     top: 0;
     z-index: 1000;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 .nav-scrolled{
@@ -102,9 +102,11 @@ html, body{
 }
 
 .logo{
-    margin-top: 20px !important;
-    min-height: 50% !important;
-    min-width: 50% !important;
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    height: 90%;
+    width: 40px;
 }
 
 .banner-title-wrapper{
@@ -129,17 +131,21 @@ html, body{
     grid-auto-rows: minmax(100px, auto);
 }
 
+.landing-wrapper h3{
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
 .landing-left{
     grid-column: 1 / 4;
     grid-row: 1 / 5;
     background-color: whitesmoke;
 }
 
-.landing-right{
-    height: 100px;
+.carousel-wrapper{
     grid-column: 4 / 6;
     grid-row: 1;
-    background-color: whitesmoke;
+    background-color: blue;
 }
 
 .map-wrapper{
@@ -148,16 +154,20 @@ html, body{
     grid-row: 2 / 4;
     background-color: whitesmoke;
     display: grid;
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(5px, auto);
+}
+
+.phone{
+    text-align:center;
 }
 
 .map{
+    height: 200px;
     position: relative;
 }
 
-.location{
-    /* background-color: yellow; */
+.address{
+    text-align: center;
 }
 
 .schedule-wrapper{

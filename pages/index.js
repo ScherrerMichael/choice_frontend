@@ -8,7 +8,6 @@ import Teriyaki1 from '../public/Teriyaki1.jpg'
 import Teriyaki2 from '../public/Teriyaki2.jpg'
 import Teriyaki3 from '../public/Teriyaki3.jpg'
 import beer from '../public/beer-tap.jpg'
-import logo from '../public/logo.png'
 import Carousel from './components/carousel'
 
 export default function Home({ data }) {
@@ -17,32 +16,45 @@ export default function Home({ data }) {
       <Header />
       <div className="banner">
         <h1 className="banner-title-wrapper">
-                    <Image
-                        className="logo"
-                        src={logo}
-                        alt="Logo of Choice Deli"
-                    ></Image>
-          </h1>
+        </h1>
       </div>
       <div className="landing-wrapper">
         <div className="landing-left">landing left</div>
-        <div className="landing-right">
-            <Carousel />
+        <div className="carousel-wrapper">
+          <Carousel />
         </div>
         <div className="map-wrapper">
           <div className="map">
             <MapContainer />
           </div>
-          <div className="location">
-            location
+          <div>
+
+            <div className="address">
+              <h3>
+                Address:
+              </h3>
+              <a href="https://goo.gl/maps/5madDQdLQhr868rP7">
+                6415 8th Ave NW, Seattle, WA 98107
+              </a>
+            </div>
+
+            <div className="phone">
+              <h3>
+                Phone:
+              </h3>
+              <a href="tel:+1206-789-0211">
+                (206)-789-0211
+                </a>
+            </div>
+
           </div>
         </div>
         <div className="schedule-wrapper">
           <div className="schedule">
-            <ScheduleItem day="Mon - Th" time="7am - 12am"/>
-            <ScheduleItem day="Fri" time="7am - 1pm"/>
-            <ScheduleItem day="Sat" time="8am - 1am"/>
-            <ScheduleItem day="Sun" time="8am - 12am"/>
+            <ScheduleItem day="Mon - Th" time="7am - 12am" />
+            <ScheduleItem day="Fri" time="7am - 1pm" />
+            <ScheduleItem day="Sat" time="8am - 1am" />
+            <ScheduleItem day="Sun" time="8am - 12am" />
           </div>
         </div>
       </div>
@@ -52,23 +64,23 @@ export default function Home({ data }) {
 }
 
 class ScheduleItem extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            day: String,
-            time: String,
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      day: String,
+      time: String,
     }
-    render() {
-        const {
-            day,
-            time,
-        } = this.props
-        return (
-          <>
-            <div className="day">{day}</div>
-            <div className="time">{time}</div>
-            </>
-        );
-    }
+  }
+  render() {
+    const {
+      day,
+      time,
+    } = this.props
+    return (
+      <>
+        <div className="day">{day}</div>
+        <div className="time">{time}</div>
+      </>
+    );
+  }
 }

@@ -31,6 +31,13 @@ class Header extends Component {
     render() {
         return (<>
             <div className={this.state.scrolled ? 'navBar nav-scrolled' : 'navBar'}>
+                <div className="logo">
+                    <Image
+                        layout="fill"
+                        src={logo}
+                        alt="Logo of Choice Deli"
+                    ></Image>
+                </div>
                 <button className="hamburger" onClick={this.Toggle}>
                     placeholder
                 </button>
