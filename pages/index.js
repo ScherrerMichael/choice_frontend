@@ -19,7 +19,34 @@ export default function Home({ data }) {
         </h1>
       </div>
       <div className="landing-wrapper">
-        <div className="landing-left">landing left</div>
+        <div className="landing-left">
+          Welcome to Choice Deli!
+          CHOICE DELI NOTES
+
+craft beer from local brewerys
+
+friendly staff
+
+kegs (limited): Tuesday is the cutoff to order kegs for the week
+
+add ratings from yelp
+
+no credit card fee
+
+we have atm machine
+
+to-go one-time fee 50 cents
+
+specialty: craft beer, food, convience
+
+link to postmates, uber eats.
+
+order about 10 minutes before closing
+
+special events: block party, wine tasting
+
+(find out how to use the same url or figure something out)
+          </div>
         <div className="carousel-wrapper">
           <Carousel />
         </div>

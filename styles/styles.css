@@ -37,15 +37,9 @@ html, body{
     /* overflow-y: hidden; */
 }
 
-.nav-scrolled{
-    /* height: 40px !important; */
-}
-
 .nav-links{
     display: none;
-    position: sticky;
-    margin-top: 40px;
-    width: auto;
+    z-index: 1000;
 }
 
 .link{
@@ -60,14 +54,16 @@ html, body{
 }
 
 .show-nav {
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    top: 50px;
+    position: absolute;
     display: block;
 }
 
 /* Media screen size */
 @media screen and (min-width: 768px) {
-.nav-scrolled{
-    height: 40px !important;
-}
     .nav-links{
         position: absolute;
         right: 0;
@@ -79,8 +75,12 @@ html, body{
         display: none;
     }
 
-    .links {
-        height: auto;
+    .nav-links {
+        background-color: #111;
+        position: absolute;
+        width:min-content;
+        top: 0;
+        right: 0;
         display: flex;
     }
 }
