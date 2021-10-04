@@ -9,6 +9,7 @@ import Teriyaki2 from '../public/Teriyaki2.jpg'
 import Teriyaki3 from '../public/Teriyaki3.jpg'
 import beer from '../public/beer-tap.jpg'
 import Carousel from './components/carousel'
+import { Button } from 'reactstrap';
 
 export default function Home({ data }) {
   return (
@@ -21,19 +22,37 @@ export default function Home({ data }) {
       </div>
       <div className="landing-wrapper">
         <div className="landing-left">
-          <h2>Delicious Food</h2>
-          <p>Hungry? Come try of our signature Teriyaki, and Combination meals. Online delivery, and phone order pick-up available too.
-          </p>
-          <h2>Variety Drinks</h2>
-          <p>
-          Large selection of drinks from wine to craft beer from local breweries, and kegs*.
-          *kegs must be ordered on or before tuesday for the week.
-          </p>
-          <h2>Many More</h2>
-          <p>
-          We have a convience store for all your daily needs. Stay tuned for special events such as block parties, and wine tasting!
-          </p>
+          <div className="section">
+            <h2>Delicious Food</h2>
+            <p className="description">Hungry? Come try of our signature Teriyaki, and Combination meals. Online delivery, and phone order pick-up available too.
+            </p>
+            <div className="button">
+            <Link
+            href="menu"
+            >Menu</Link>
+            </div>
           </div>
+          <div className="section">
+            <h2>Variety Drinks</h2>
+            <p className="description">
+              Large selection of drinks from wine to craft beer from local breweries, and kegs*.
+            </p>
+            <p className="note">
+            *kegs must be ordered on or before tuesday for the week.
+            </p>
+          </div>
+          <div className="section">
+            <h2>Many More</h2>
+            <p className="description">
+              We have a convience store for all your daily needs. Stay tuned for special events such as block parties, and wine tastings!
+            </p>
+            <div className="button">
+            <Link
+            href="menu"
+            >Events</Link>
+            </div>
+          </div>
+        </div>
         <div className="carousel-wrapper">
           <Carousel />
         </div>
@@ -56,9 +75,7 @@ export default function Home({ data }) {
               <h3>
                 Phone:
               </h3>
-              <a href="tel:+1206-789-0211">
-                (206)-789-0211
-                </a>
+              (206)-789-0211
             </div>
 
           </div>
