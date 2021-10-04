@@ -110,25 +110,27 @@ html, body{
 }
 
 .banner-title-wrapper{
-    border-radius: 10px;
+    /* border-radius: 10px; */
     color: whitesmoke;
-    background-color: black;
+    /* background-color: black; */
     position: absolute;
     width: 70%;
     height: 40%;
     top: 15%;
-    left: 20%;
+    left: 15%;
     margin: 0;
     text-align: center;
+	font-size: 80px;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
 
 .landing-wrapper{
     height: 1000px;
-    /* background-color: whitesmoke; */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 50);
     gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(200px, auto);
 }
 
 .landing-wrapper h3{
@@ -142,10 +144,37 @@ html, body{
     background-color: whitesmoke;
 }
 
+.landing-left h2{
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 4px;
+    padding: 5px;
+    margin-left: 2px;
+    margin-top: 0;
+}
+
+.landing-left p{
+    margin-bottom: 100px;
+}
+
 .carousel-wrapper{
     grid-column: 4 / 6;
     grid-row: 1;
-    background-color: blue;
+    /* background-color: blue; */
+}
+
+.carousel{
+    height: 100% !important;
+    background-color: black;
+}
+
+.slide div{
+    height: 100% !important;
+    padding: 10px;
+}
+
+.carousel-root{
+    height: 100% !important;
 }
 
 .map-wrapper{

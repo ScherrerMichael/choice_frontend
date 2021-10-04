@@ -16,36 +16,23 @@ export default function Home({ data }) {
       <Header />
       <div className="banner">
         <h1 className="banner-title-wrapper">
+          Choice Deli
         </h1>
       </div>
       <div className="landing-wrapper">
         <div className="landing-left">
-          Welcome to Choice Deli!
-          CHOICE DELI NOTES
-
-craft beer from local brewerys
-
-friendly staff
-
-kegs (limited): Tuesday is the cutoff to order kegs for the week
-
-add ratings from yelp
-
-no credit card fee
-
-we have atm machine
-
-to-go one-time fee 50 cents
-
-specialty: craft beer, food, convience
-
-link to postmates, uber eats.
-
-order about 10 minutes before closing
-
-special events: block party, wine tasting
-
-(find out how to use the same url or figure something out)
+          <h2>Delicious Food</h2>
+          <p>Hungry? Come try of our signature Teriyaki, and Combination meals. Online delivery, and phone order pick-up available too.
+          </p>
+          <h2>Variety Drinks</h2>
+          <p>
+          Large selection of drinks from wine to craft beer from local breweries, and kegs*.
+          *kegs must be ordered on or before tuesday for the week.
+          </p>
+          <h2>Many More</h2>
+          <p>
+          We have a convience store for all your daily needs. Stay tuned for special events such as block parties, and wine tasting!
+          </p>
           </div>
         <div className="carousel-wrapper">
           <Carousel />
