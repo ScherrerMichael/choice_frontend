@@ -41,21 +41,10 @@ export default function Menu({ data }) {
                 <div className="menu-middle">
                     <h2 className="menu-title">Menu</h2>
                     <ItemGroup refProp={Appetizers} name={'Appetizers'}></ItemGroup>
-                {data.appetizers.map((food, i) => (
-                    <MenuItem key={'appetizers - ' + i} name={food.name} price={food.price}></MenuItem>
-                ))}
+                    <MenuItem name="foodname" price="$100"></MenuItem>
                     <ItemGroup refProp={KFC} name={'KFC'}></ItemGroup>
-                {data.kfc.map((food, i) => (
-                    <MenuItem key={'appetizers - ' + i} name={food.name} price={food.price}></MenuItem>
-                ))}
                     <ItemGroup refProp={Entrees} name={'Entrees'}></ItemGroup>
-                {data.entrees.map((food, i) => (
-                    <MenuItem key={'appetizers - ' + i} name={food.name} price={food.price}></MenuItem>
-                ))}
                     <ItemGroup refProp={Teriyaki} name={'Teriyaki'}></ItemGroup>
-                {data.teriyaki.map((food, i) => (
-                    <MenuItem key={'appetizers - ' + i} name={food.name} price={food.price}></MenuItem>
-                ))}
                     <ItemGroup refProp={Combinations} name={'Combinations'}></ItemGroup>
                     <div>Standard Combos</div>
                     <MenuItem name={'Chicken Teriyaki Combo'} price={'$3.45'}></MenuItem>
@@ -119,57 +108,57 @@ class MenuItem extends Component {
     }
 }
 
-function comapare_name(a, b) {
-    if (a.name.toLowerCase() < b.catagory.toLowerCase()) {
-        return -1;
-    }
-    if (a.name.toLowerCase() > b.catagory.toLowerCase()) {
-        return -1;
-    }
-    return 0;
-}
+// function comapare_name(a, b) {
+//     if (a.name.toLowerCase() < b.catagory.toLowerCase()) {
+//         return -1;
+//     }
+//     if (a.name.toLowerCase() > b.catagory.toLowerCase()) {
+//         return -1;
+//     }
+//     return 0;
+// }
 
-function getCatagoryFoods(cat, data) {
-    let result = []
-    for (let i in data) {
-        if (data[i].catagory === cat) {
-            // console.log(data[i])
-            result.push(data[i]);
-        }
-    }
-    return result;
-}
+// function getCatagoryFoods(cat, data) {
+//     let result = []
+//     for (let i in data) {
+//         if (data[i].catagory === cat) {
+//             // console.log(data[i])
+//             result.push(data[i]);
+//         }
+//     }
+//     return result;
+// }
 
-export async function getStaticProps(content) {
-    try{
-    const res = await fetch(process.env.API_ROUTE + '/foodItems')
-    const data = await res.json()
-    data.sort(comapare_name);
-    //   console.log(data);
-    const appetizers = getCatagoryFoods("Appetizer", data);
-    const entrees = getCatagoryFoods("Entree", data);
-    const kfc = getCatagoryFoods("KFC", data);
-    const combinations = getCatagoryFoods("Combinations", data)
-    const teriyaki = getCatagoryFoods("Teriyaki", data)
-    const specials = getCatagoryFoods("Specials", data)
+// export async function getStaticProps(content) {
+//     try{
+//     const res = await fetch(process.env.API_ROUTE + '/foodItems')
+//     const data = await res.json()
+//     data.sort(comapare_name);
+//     //   console.log(data);
+//     const appetizers = getCatagoryFoods("Appetizer", data);
+//     const entrees = getCatagoryFoods("Entree", data);
+//     const kfc = getCatagoryFoods("KFC", data);
+//     const combinations = getCatagoryFoods("Combinations", data)
+//     const teriyaki = getCatagoryFoods("Teriyaki", data)
+//     const specials = getCatagoryFoods("Specials", data)
 
-    if (!data){
-        return {notFound: true};
-    }
+//     if (!data){
+//         return {notFound: true};
+//     }
 
-    return {
-        props: { data :
-        {
-            appetizers,
-            kfc,
-            entrees,
-            teriyaki,
-            combinations,
-            specials,
+//     return {
+//         props: { data :
+//         {
+//             appetizers,
+//             kfc,
+//             entrees,
+//             teriyaki,
+//             combinations,
+//             specials,
 
-        }}, //will be passed to the page
-    }
-    } catch(e) {
-        return {notFound: true};
-    }
-}
+//         }}, //will be passed to the page
+//     }
+//     } catch(e) {
+//         return {notFound: true};
+//     }
+// }

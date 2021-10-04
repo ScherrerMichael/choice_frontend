@@ -35,7 +35,7 @@ export default function Home({ data }) {
           <div className="section">
             <h2>Variety Drinks</h2>
             <p className="description">
-              Large selection of drinks from wine to craft beer from local breweries, and kegs*.
+              Large selection of drinks from wine, craft beer from local breweries, and kegs*.
             </p>
             <p className="note">
             *kegs must be ordered on or before tuesday for the week.
