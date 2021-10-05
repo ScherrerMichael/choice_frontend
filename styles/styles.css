@@ -1,4 +1,7 @@
-/* Conainer */
+/* Global */
+
+
+/* Container */
 .container{
     width: 100%;
     position: relative;
@@ -110,9 +113,7 @@ html, body{
 }
 
 .banner-title-wrapper{
-    /* border-radius: 10px; */
     color: whitesmoke;
-    /* background-color: black; */
     position: absolute;
     width: 70%;
     height: 40%;
@@ -120,8 +121,9 @@ html, body{
     left: 15%;
     margin: 0;
     text-align: center;
-	font-size: 80px;
-	-webkit-text-stroke-width: 2px;
+	font-size: 200px;
+    font-family: cursive;
+	-webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: black;
 }
 
@@ -286,10 +288,15 @@ html, body{
     text-align: center;
 }
 .item-group{
+    font-family: monospace;
+    font-size: xx-large;
     line-height: 50px;
     text-align: center;
-    background-color: whitesmoke;
-    border-style: double;
+    /* background-color: whitesmoke; */
+    border-width: thick;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
     margin-top: 50px;
     margin-bottom: 5px;
     height: 50px;

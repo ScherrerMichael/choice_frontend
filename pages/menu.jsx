@@ -40,12 +40,12 @@ export default function Menu({ data }) {
                 </div>
                 <div className="menu-middle">
                     <h2 className="menu-title">Menu</h2>
-                    <ItemGroup refProp={Appetizers} name={'Appetizers'}></ItemGroup>
+                    <ItemGroup refProp={Appetizers} name={'APPETIZERS'}></ItemGroup>
                     <MenuItem name="foodname" price="$100"></MenuItem>
                     <ItemGroup refProp={KFC} name={'KFC'}></ItemGroup>
-                    <ItemGroup refProp={Entrees} name={'Entrees'}></ItemGroup>
-                    <ItemGroup refProp={Teriyaki} name={'Teriyaki'}></ItemGroup>
-                    <ItemGroup refProp={Combinations} name={'Combinations'}></ItemGroup>
+                    <ItemGroup refProp={Entrees} name={'ENTREES'}></ItemGroup>
+                    <ItemGroup refProp={Teriyaki} name={'TERIYAKI'}></ItemGroup>
+                    <ItemGroup refProp={Combinations} name={'COMBINATIONS'}></ItemGroup>
                     <div>Standard Combos</div>
                     <MenuItem name={'Chicken Teriyaki Combo'} price={'$3.45'}></MenuItem>
                     <MenuItem name={'Spicy Chicken Teriyaki Combo'} price={'$3.45'}></MenuItem>
