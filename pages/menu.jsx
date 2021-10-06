@@ -42,9 +42,10 @@ export default function Menu({ data }) {
 
                     <h2 className="menu-title">Menu</h2>
                     <ItemType refProp={Appetizers} name={'APPETIZERS'}></ItemType>
-                    <ItemGroup text="test">
+                    <ItemGroup text="Comes with one pork, and one veggie roll">
                     <MenuItem name="Egg Rolls (2)" price="$4.99" />
                     </ItemGroup>
+                    <MenuItem name="Egg Rolls Mini (5)" price="$4.99" />
                     <MenuItem name="Gyoza (10)" price="$6.99" />
                     <MenuItem name="French Fries" price="$4.99" />
                     <MenuItem name="Onion Rings" price="$5.99" />
@@ -55,7 +56,9 @@ export default function Menu({ data }) {
                     <MenuItem name="6 piece" price="$8.99" />
                     <MenuItem name="9 piece" price="$12.99" />
                     <MenuItem name="12 piece" price="$16.99" />
+                    <ItemGroup text="Sauces: of BBQ, ranch, ketchup, tartar, honey mustard">
                     <MenuItem name="Dipping Sauce" price="$0.50" />
+                    </ItemGroup>
 
                     <ItemType refProp={Entrees} name={'ENTREES'}></ItemType>
                     <MenuItem name="Vegetable" price="$9.99" />
@@ -77,12 +80,14 @@ export default function Menu({ data }) {
                     <MenuItem name="Broccoli Beef" price="$14.99" />
 
                     <ItemType refProp={Combinations} name={'COMBINATIONS'}></ItemType>
+                    <ItemGroup text="Includes: (4) Gyoza OR (1) Eggroll">
                     <MenuItem name="Chicken" price="$12.99" />
                     <MenuItem name="Spicy Chicken" price="$13.99" />
                     <MenuItem name="Breast" price="$14.99" />
                     <MenuItem name="Katsu" price="$14.99" />
                     <MenuItem name="Beef" price="$15.99" />
                     <MenuItem name="Shrimp" price="$16.99" />
+                    </ItemGroup>
                     {/* above includes your choice of Gyoza or Egg Roll */}
                     <MenuItem name="Chicken & Katsu" price="$14.99" />
                     <MenuItem name="Spicy Chicken & Katsu" price="$15.99" />
