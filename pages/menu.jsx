@@ -65,7 +65,7 @@ export default function Menu({ data }) {
                     <ItemGroup refProp={Teriyaki} name={'TERIYAKI'}></ItemGroup>
                     <MenuItem name="Tofu" price="$9.99" />
                     <MenuItem name="Chicken" price="$10.99" />
-                    <MenuItem name="Spiy Chicken" price="$11.99" />
+                    <MenuItem name="Spicy Chicken" price="$11.99" />
                     <MenuItem name="Breast (White meat)" price="$12.99" />
                     <MenuItem name="Chicken Katsu" price="$13.99" />
                     <MenuItem name="Beef" price="$14.99" />
