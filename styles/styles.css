@@ -291,7 +291,7 @@ html, body{
     font-family: monospace;
     font-size: xx-large;
     line-height: 50px;
-    text-align: center;
+    text-align:left;
     /* background-color: whitesmoke; */
     border-width: thick;
     border-style: solid;
@@ -300,6 +300,13 @@ html, body{
     margin-top: 50px;
     margin-bottom: 5px;
     height: 50px;
+    position: relative;
+}
+.group-par{
+    font-size: large;
+    text-align: end;
+    margin-left: 50px;
+
 }
 .item{
     padding-left: 15px;

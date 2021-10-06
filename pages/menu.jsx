@@ -33,31 +33,67 @@ export default function Menu({ data }) {
                             Combinations.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         }}>Combinations</button>
 
-                        {/* <button className="button" onClick={() => {
-                                this.Specials.current.scrollIntoView({behavior: 'smooth'});
-                            }}>Specials</button> */}
+                        <button className="button" onClick={() => {
+                                Specials.current.scrollIntoView({behavior: 'smooth'});
+                            }}>Specials</button>
                     </div>
                 </div>
                 <div className="menu-middle">
+
                     <h2 className="menu-title">Menu</h2>
                     <ItemGroup refProp={Appetizers} name={'APPETIZERS'}></ItemGroup>
-                    <MenuItem name="foodname" price="$100"></MenuItem>
-                    <ItemGroup refProp={KFC} name={'KFC'}></ItemGroup>
+                    <MenuItem name="Egg Rolls (2)" price="$4.99" />
+                    <MenuItem name="Gyoza (10)" price="$6.99" />
+                    <MenuItem name="French Fries" price="$4.99" />
+                    <MenuItem name="Onion Rings" price="$5.99" />
+                    <MenuItem name="Jalapeño Poppers (6)" price="$5.99" />
+                    <MenuItem name="Side Rice or Salad" price="$2.50" />
+
+                    <ItemGroup refProp={KFC} parenthesis={"(Korean Fried Chicken)"}name={'KFC'}></ItemGroup>
+                    <MenuItem name="6 piece" price="$8.99" />
+                    <MenuItem name="9 piece" price="$12.99" />
+                    <MenuItem name="12 piece" price="$16.99" />
+                    <MenuItem name="Dipping Sauce" price="$0.50" />
+
                     <ItemGroup refProp={Entrees} name={'ENTREES'}></ItemGroup>
+                    <MenuItem name="Vegetable" price="$9.99" />
+                    <MenuItem name="Tofu" price="$11.99" />
+                    <MenuItem name="Chicken" price="$11.99" />
+                    <MenuItem name="Beef" price="$13.99" />
+                    <MenuItem name="Shrimp" price="$15.99" />
+
                     <ItemGroup refProp={Teriyaki} name={'TERIYAKI'}></ItemGroup>
+                    <MenuItem name="Tofu" price="$9.99" />
+                    <MenuItem name="Chicken" price="$10.99" />
+                    <MenuItem name="Spiy Chicken" price="$11.99" />
+                    <MenuItem name="Breast (White meat)" price="$12.99" />
+                    <MenuItem name="Chicken Katsu" price="$13.99" />
+                    <MenuItem name="Beef" price="$14.99" />
+                    <MenuItem name="Shrimp" price="$15.99" />
+                    <MenuItem name="Short Rib" price="$16.99" />
+                    <MenuItem name="Mongolian Beef" price="$14.99" />
+                    <MenuItem name="Broccoli Beef" price="$14.99" />
+
                     <ItemGroup refProp={Combinations} name={'COMBINATIONS'}></ItemGroup>
-                    <div>Standard Combos</div>
-                    <MenuItem name={'Chicken Teriyaki Combo'} price={'$3.45'}></MenuItem>
-                    <MenuItem name={'Spicy Chicken Teriyaki Combo'} price={'$3.45'}></MenuItem>
-                    <MenuItem name={'Chicken Katsu Combo'} price={'$3.45'}></MenuItem>
-                    <MenuItem name={'Beef Teriyaki Combo'} price={'$3.45'}></MenuItem>
-                    <div>Half and Half Combos</div>
-                    <MenuItem name={'Chicken Teriyaki & Katsu Combo'} price={'$3.45'}></MenuItem>
-                    <MenuItem name={'Spicy Chicken & Katsu Combo'} price={'$3.45'}></MenuItem>
-                    <MenuItem name={'Chicken & Beef Teriyaki Combo'} price={'$3.45'}></MenuItem>
-                    <MenuItem name={'Chicken & Shrimp Teriyaki Combo'} price={'$3.45'}></MenuItem>
-                    <MenuItem name={'Spicy Chicken & Shrimp Combo'} price={'$3.45'}></MenuItem>
-                    <MenuItem name={'Chicken & Short Rib Combo'} price={'$3.45'}></MenuItem>
+                    <MenuItem name="Chicken" price="$12.99" />
+                    <MenuItem name="Spicy Chicken" price="$13.99" />
+                    <MenuItem name="Breast" price="$14.99" />
+                    <MenuItem name="Katsu" price="$14.99" />
+                    <MenuItem name="Beef" price="$15.99" />
+                    <MenuItem name="Shrimp" price="$16.99" />
+                    {/* above includes your choice of Gyoza or Egg Roll */}
+                    <MenuItem name="Chicken & Katsu" price="$14.99" />
+                    <MenuItem name="Spicy Chicken & Katsu" price="$15.99" />
+                    <MenuItem name="Chicken & Shrimp" price="$17.99" />
+                    <MenuItem name="Chicken & Short Rib" price="$19.99" />
+                    {/* All Teriyaki dishes served with rice and salad */}
+                    {/* (+$1.00) Make it spicy*/}
+
+                    <ItemGroup refProp={Specials} name={'SPECIALS'}></ItemGroup>
+                    <MenuItem name="Choice Burger" price="$9.99" />
+                    <MenuItem name="Katsu Burger" price="$9.99" />
+                    <MenuItem name="Hoagie's Philly Cheese" price="$9.99" />
+                    <MenuItem name="Fish & Chips" price="$11.99" />
                 </div>
                 <div className="menu-right"></div>
             </div>
@@ -71,15 +107,18 @@ class ItemGroup extends Component {
         super(props);
         this.state = {
             name: String,
+            parenthesis: String,
         }
     }
     render() {
         const {
             name,
+            parenthesis,
         } = this.props
         return (
             <div ref={this.props.refProp} className="item-group">
                 <strong>{name}</strong>
+                <span className="group-par">{parenthesis}</span>
             </div>
         );
     }
