@@ -44,7 +44,7 @@ export default function Home({ data }) {
           <div className="section">
             <h2>Many More</h2>
             <p className="description">
-              We have a convience store for all your daily needs. Stay tuned for special events such as block parties, and wine tastings!
+              We have a convience store for all your daily needs. Also, stay tuned for special events such as block parties, and wine tastings!
             </p>
             <div className="button">
             <Link

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import Image from 'next/image'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
@@ -16,7 +14,7 @@ export default class MyCarousel extends Component {
             >
                 <div>
                     <img src="/Teriyaki1.jpg"/>
-                    <p className="legend">Legend 1</p>
+                    <p className="legend">Chicken Teriyaki Courtesy of Ellery D. from Yelp</p>
                 </div>
                 <div>
                     <img src="/Teriyaki1.jpg"/>

@@ -1,4 +1,4 @@
-import React, { Component, createRef } from 'react';
+import React, { Children, Component, createRef } from 'react';
 
 export default function Menu({ data }) {
     const Appetizers = createRef();
@@ -41,28 +41,30 @@ export default function Menu({ data }) {
                 <div className="menu-middle">
 
                     <h2 className="menu-title">Menu</h2>
-                    <ItemGroup refProp={Appetizers} name={'APPETIZERS'}></ItemGroup>
+                    <ItemType refProp={Appetizers} name={'APPETIZERS'}></ItemType>
+                    <ItemGroup text="test">
                     <MenuItem name="Egg Rolls (2)" price="$4.99" />
+                    </ItemGroup>
                     <MenuItem name="Gyoza (10)" price="$6.99" />
                     <MenuItem name="French Fries" price="$4.99" />
                     <MenuItem name="Onion Rings" price="$5.99" />
                     <MenuItem name="Jalapeño Poppers (6)" price="$5.99" />
                     <MenuItem name="Side Rice or Salad" price="$2.50" />
 
-                    <ItemGroup refProp={KFC} parenthesis={"(Korean Fried Chicken)"}name={'KFC'}></ItemGroup>
+                    <ItemType refProp={KFC} parenthesis={"(Korean Fried Chicken)"}name={'KFC'}></ItemType>
                     <MenuItem name="6 piece" price="$8.99" />
                     <MenuItem name="9 piece" price="$12.99" />
                     <MenuItem name="12 piece" price="$16.99" />
                     <MenuItem name="Dipping Sauce" price="$0.50" />
 
-                    <ItemGroup refProp={Entrees} name={'ENTREES'}></ItemGroup>
+                    <ItemType refProp={Entrees} name={'ENTREES'}></ItemType>
                     <MenuItem name="Vegetable" price="$9.99" />
                     <MenuItem name="Tofu" price="$11.99" />
                     <MenuItem name="Chicken" price="$11.99" />
                     <MenuItem name="Beef" price="$13.99" />
                     <MenuItem name="Shrimp" price="$15.99" />
 
-                    <ItemGroup refProp={Teriyaki} name={'TERIYAKI'}></ItemGroup>
+                    <ItemType refProp={Teriyaki} name={'TERIYAKI'}></ItemType>
                     <MenuItem name="Tofu" price="$9.99" />
                     <MenuItem name="Chicken" price="$10.99" />
                     <MenuItem name="Spicy Chicken" price="$11.99" />
@@ -74,7 +76,7 @@ export default function Menu({ data }) {
                     <MenuItem name="Mongolian Beef" price="$14.99" />
                     <MenuItem name="Broccoli Beef" price="$14.99" />
 
-                    <ItemGroup refProp={Combinations} name={'COMBINATIONS'}></ItemGroup>
+                    <ItemType refProp={Combinations} name={'COMBINATIONS'}></ItemType>
                     <MenuItem name="Chicken" price="$12.99" />
                     <MenuItem name="Spicy Chicken" price="$13.99" />
                     <MenuItem name="Breast" price="$14.99" />
@@ -89,7 +91,7 @@ export default function Menu({ data }) {
                     {/* All Teriyaki dishes served with rice and salad */}
                     {/* (+$1.00) Make it spicy*/}
 
-                    <ItemGroup refProp={Specials} name={'SPECIALS'}></ItemGroup>
+                    <ItemType refProp={Specials} name={'SPECIALS'}></ItemType>
                     <MenuItem name="Choice Burger" price="$9.99" />
                     <MenuItem name="Katsu Burger" price="$9.99" />
                     <MenuItem name="Hoagie's Philly Cheese" price="$9.99" />
@@ -102,7 +104,7 @@ export default function Menu({ data }) {
     );
 }
 
-class ItemGroup extends Component {
+class ItemType extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -116,13 +118,24 @@ class ItemGroup extends Component {
             parenthesis,
         } = this.props
         return (
-            <div ref={this.props.refProp} className="item-group">
+            <div ref={this.props.refProp} className="item-type">
                 <strong>{name}</strong>
                 <span className="group-par">{parenthesis}</span>
             </div>
         );
     }
 }
+//wrapper component
+const ItemGroup = (props) => {
+    return props.text ? (
+        <div className="item-group">
+        {props.children}
+        <div className="group-text">{props.text}</div>
+        </div>
+    ) : (
+        props.children
+    );
+};
 
 
 class MenuItem extends Component {
