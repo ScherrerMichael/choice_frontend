@@ -42,32 +42,39 @@ export default function Menu({ data }) {
 
                     <h2 className="menu-title">Menu</h2>
                     <ItemType refProp={Appetizers} name={'APPETIZERS'}></ItemType>
-                    <ItemGroup text="Comes with one pork, and one veggie roll">
-                    <MenuItem name="Egg Rolls (2)" price="$4.99" />
-                    </ItemGroup>
-                    <MenuItem name="Egg Rolls Mini (5)" price="$4.99" />
+                    <ItemGroup>
+                    <MenuItem name="Egg Rolls (2)" price="$4.99" 
+                    description="Comes 1 pork & 1 veggie eggroll"/>
+                    <MenuItem name="Egg Rolls Mini (5)" price="$4.99" 
+                    description="5 mini vegetable rolls"/>
                     <MenuItem name="Gyoza (10)" price="$6.99" />
                     <MenuItem name="French Fries" price="$4.99" />
                     <MenuItem name="Onion Rings" price="$5.99" />
                     <MenuItem name="Jalapeño Poppers (6)" price="$5.99" />
                     <MenuItem name="Side Rice or Salad" price="$2.50" />
+                    </ItemGroup>
 
                     <ItemType refProp={KFC} parenthesis={"(Korean Fried Chicken)"}name={'KFC'}></ItemType>
+                    <ItemGroup>
+                    <MenuDescription text="Options: Original, Sweet & Sour, Sweet & Spicy"/>
                     <MenuItem name="6 piece" price="$8.99" />
                     <MenuItem name="9 piece" price="$12.99" />
                     <MenuItem name="12 piece" price="$16.99" />
-                    <ItemGroup text="Sauces: of BBQ, ranch, ketchup, tartar, honey mustard">
-                    <MenuItem name="Dipping Sauce" price="$0.50" />
+                    <MenuItem name="Dipping Sauce" price="$0.50" 
+                    description="BBQ, Ranch, Ketchup, Tartar, Honey Mustard"/>
                     </ItemGroup>
 
                     <ItemType refProp={Entrees} name={'ENTREES'}></ItemType>
+                    <ItemGroup>
                     <MenuItem name="Vegetable" price="$9.99" />
                     <MenuItem name="Tofu" price="$11.99" />
                     <MenuItem name="Chicken" price="$11.99" />
                     <MenuItem name="Beef" price="$13.99" />
                     <MenuItem name="Shrimp" price="$15.99" />
+                    </ItemGroup>
 
                     <ItemType refProp={Teriyaki} name={'TERIYAKI'}></ItemType>
+                    <ItemGroup>
                     <MenuItem name="Tofu" price="$9.99" />
                     <MenuItem name="Chicken" price="$10.99" />
                     <MenuItem name="Spicy Chicken" price="$11.99" />
@@ -78,29 +85,38 @@ export default function Menu({ data }) {
                     <MenuItem name="Short Rib" price="$16.99" />
                     <MenuItem name="Mongolian Beef" price="$14.99" />
                     <MenuItem name="Broccoli Beef" price="$14.99" />
+                    </ItemGroup>
 
                     <ItemType refProp={Combinations} name={'COMBINATIONS'}></ItemType>
-                    <ItemGroup text="Includes: (4) Gyoza OR (1) Eggroll">
-                    <MenuItem name="Chicken" price="$12.99" />
-                    <MenuItem name="Spicy Chicken" price="$13.99" />
-                    <MenuItem name="Breast" price="$14.99" />
-                    <MenuItem name="Katsu" price="$14.99" />
-                    <MenuItem name="Beef" price="$15.99" />
-                    <MenuItem name="Shrimp" price="$16.99" />
-                    </ItemGroup>
-                    {/* above includes your choice of Gyoza or Egg Roll */}
+                    <ItemGroup>
+                    <MenuItem name="Chicken*" price="$12.99"/>
+                    <MenuItem name="Spicy Chicken*" price="$13.99" />
+                    <MenuItem name="Breast*" price="$14.99" />
+                    <MenuItem name="Katsu*" price="$14.99" />
+                    <MenuItem name="Beef*" price="$15.99" />
+                    <MenuItem name="Shrimp*" price="$16.99" />
+                    {/* above includes your choice of Gyoza (4) or Egg Roll (1)*/}
                     <MenuItem name="Chicken & Katsu" price="$14.99" />
                     <MenuItem name="Spicy Chicken & Katsu" price="$15.99" />
                     <MenuItem name="Chicken & Shrimp" price="$17.99" />
                     <MenuItem name="Chicken & Short Rib" price="$19.99" />
                     {/* All Teriyaki dishes served with rice and salad */}
                     {/* (+$1.00) Make it spicy*/}
+                    <MenuDescription text="(all teriyaki dishes served with rice and salad)"/>
+                    <MenuDescription text="* Choice of Gyoza (4) OR Egg Roll (1)"/>
+                    </ItemGroup>
 
                     <ItemType refProp={Specials} name={'SPECIALS'}></ItemType>
-                    <MenuItem name="Choice Burger" price="$9.99" />
-                    <MenuItem name="Katsu Burger" price="$9.99" />
-                    <MenuItem name="Hoagie's Philly Cheese" price="$9.99" />
-                    <MenuItem name="Fish & Chips" price="$11.99" />
+                    <ItemGroup>
+                    <MenuItem name="Choice Burger" price="$9.99" 
+                    description="8 oz. ground beef, smoked bacon, american cheese. Served with fries, lettuce, and tomato"/>
+                    <MenuItem name="Katsu Burger" price="$9.99" 
+                    description="Fried chicken cutlet burger, served with fries, lettuce, and tomato"/>
+                    <MenuItem name="Hoagie's Philly Cheese" price="$9.99" 
+                    description="Tender beef with onions, bell peppers, swiss cheese and served with fries"/>
+                    <MenuItem name="Fish & Chips" price="$11.99" 
+                    description="Beer battered cod an served with fries and tartar sauce"/>
+                    </ItemGroup>
                 </div>
                 <div className="menu-right"></div>
             </div>
@@ -138,10 +154,22 @@ const ItemGroup = (props) => {
         <div className="group-text">{props.text}</div>
         </div>
     ) : (
-        props.children
+        <div className="item-group">
+        {props.children}
+        </div>
     );
 };
 
+const MenuDescription = (props) => {
+    return props.text? (
+        <div className="item-footer">
+            {props.text}
+        </div>
+    ) : (
+        <>
+        </>
+    )
+}
 
 class MenuItem extends Component {
     constructor(props) {
@@ -149,17 +177,25 @@ class MenuItem extends Component {
         this.state = {
             name: String,
             price: String,
+            description: String,
         }
     }
     render() {
         const {
             name,
             price,
+            description,
         } = this.props
         return (
             <div className="item">
                 <div className="item-name">{name}</div>
                 <div className="item-price">{price}</div>
+                {description? 
+                <div className="item-description">
+                    {description}
+                </div> : 
+                    <>
+                    </>}
             </div>
         );
     }

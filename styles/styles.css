@@ -277,9 +277,10 @@ html, body{
 .button{
     margin-bottom: 40px;
     border: none;
-    background: transparent;
+    background: none;
     cursor:pointer;
 }
+
 .menu-middle{
     grid-column: 3/ 11;
     /* background-color: gainsboro; */
@@ -298,7 +299,7 @@ html, body{
     border-left: none;
     border-right: none;
     margin-top: 50px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     height: 50px;
     position: relative;
 }
@@ -316,12 +317,22 @@ html, body{
     grid-auto-rows: minmax(35px, auto);
     margin-bottom: 20px;
 }
+.item-description{
+    font-size: x-small;
+}
 .item-group{
-    background-color: azure;
+    /* background-color: azure; */
+    /* border: 1px solid black; */
 }
 .group-text{
+    font-weight: bold;
     text-align: center;
     font-size: xx-small;
+}
+
+.item-footer{
+    text-align: center;
+    font-size: small;
 }
 
 .item-name{
