@@ -1,15 +1,9 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import Footer from './components/footer'
 import Header from './components/header'
 import React, { Component } from 'react';
 import MapContainer from './components/map';
-import Teriyaki1 from '../public/Teriyaki1.jpg'
-import Teriyaki2 from '../public/Teriyaki2.jpg'
-import Teriyaki3 from '../public/Teriyaki3.jpg'
-import beer from '../public/beer-tap.jpg'
 import Carousel from './components/carousel'
-import { Button } from 'reactstrap';
 
 export default function Home({ data }) {
   return (

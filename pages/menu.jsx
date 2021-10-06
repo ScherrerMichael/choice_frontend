@@ -56,7 +56,7 @@ export default function Menu({ data }) {
 
                     <ItemType refProp={KFC} parenthesis={"(Korean Fried Chicken)"}name={'KFC'}></ItemType>
                     <ItemGroup>
-                    <MenuDescription text="Options: Original, Sweet & Sour, Sweet & Spicy"/>
+                    <MenuDescription text="Choose: Original ~ Sweet & Sour ~ Sweet & Spicy"/>
                     <MenuItem name="6 piece" price="$8.99" />
                     <MenuItem name="9 piece" price="$12.99" />
                     <MenuItem name="12 piece" price="$16.99" />
@@ -66,6 +66,7 @@ export default function Menu({ data }) {
 
                     <ItemType refProp={Entrees} name={'ENTREES'}></ItemType>
                     <ItemGroup>
+                    <MenuDescription text="Choose: Yakisoba ~ Stir Fry ~ Fried Rice"/>
                     <MenuItem name="Vegetable" price="$9.99" />
                     <MenuItem name="Tofu" price="$11.99" />
                     <MenuItem name="Chicken" price="$11.99" />
