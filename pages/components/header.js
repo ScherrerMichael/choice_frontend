@@ -50,6 +50,11 @@ class Header extends Component {
                 </button>
             <div className={this.state.toggle? "nav-links show-nav" : "nav-links"}>
                 <div className="link" href="#">
+                    <Link href="/">
+                        <a>Home</a>
+                    </Link>
+                </div>
+                <div className="link" href="#">
                     <Link href="/menu">
                         <a>Menu</a>
                     </Link>
@@ -60,7 +65,7 @@ class Header extends Component {
                     </Link>
                 </div>
                 <div className="link" href="#">
-                    <Link href="/Contact">
+                    <Link href="/#to-schedule">
                         <a>Contact</a>
                     </Link>
                 </div>

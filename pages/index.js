@@ -18,7 +18,7 @@ export default function Home({ data }) {
               alt="Logo of Choice Deli"
           ></img>
         <h1 className="banner-title-1">
-          Restaurant - Bar - Conveniance
+          Restaurant - Bar - Grocery
         </h1>
       </div>
       <div className="landing-wrapper">
@@ -81,7 +81,7 @@ export default function Home({ data }) {
 
           </div>
         </div>
-        <div className="schedule-wrapper">
+        <div className="schedule-wrapper" id="to-schedule">
           <div className="schedule">
             <ScheduleItem day="Mon - Th" time="7am - 12am" />
             <ScheduleItem day="Fri" time="7am - 1pm" />
