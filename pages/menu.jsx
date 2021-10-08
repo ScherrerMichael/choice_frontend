@@ -1,4 +1,6 @@
 import React, { Children, Component, createRef } from 'react';
+import Footer from './components/footer'
+import Header from './components/header'
 
 export default function Menu({ data }) {
     const Appetizers = createRef();
@@ -9,7 +11,7 @@ export default function Menu({ data }) {
     const Specials = createRef();
     return (
         <>
-            {/* <Header></Header> */}
+        <Header/>
             <div className="menu-wrapper backgound-img">
                 <div className="menu-left">
                     <div className="item-groups">
@@ -36,6 +38,12 @@ export default function Menu({ data }) {
                         <button className="button" onClick={() => {
                                 Specials.current.scrollIntoView({behavior: 'smooth'});
                             }}>Specials</button>
+                    <p>
+                        Please order 10 minutes before closing time
+                    </p>
+                    <p>
+                        To-go box fee: $0.50
+                    </p>
                     </div>
                 </div>
                 <div className="menu-middle">
@@ -103,7 +111,8 @@ export default function Menu({ data }) {
                     <MenuItem name="Chicken & Short Rib" price="$19.99" />
                     {/* All Teriyaki dishes served with rice and salad */}
                     {/* (+$1.00) Make it spicy*/}
-                    <MenuDescription text="(all teriyaki dishes served with rice and salad)"/>
+                    <MenuDescription text="all teriyaki dishes served with rice and salad"/>
+                    <MenuDescription text="$1.00 make it spicy"/>
                     <MenuDescription text="* Choice of Gyoza (4) OR Egg Roll (1)"/>
                     </ItemGroup>
 
@@ -121,7 +130,7 @@ export default function Menu({ data }) {
                 </div>
                 <div className="menu-right"></div>
             </div>
-            {/* <Footer></Footer> */}
+            <Footer/>
         </>
     );
 }

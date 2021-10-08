@@ -91,8 +91,48 @@ html, body{
 .footer{
     background-color: black;
     color: whitesmoke;
-    height: 100px;
+    height: 60px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: 50px;
+    gap: 2%;
+    font-size: x-small;
 }
+.footer-left{
+    padding-top: 10px;
+    grid-column: 1;
+    text-align: left;
+}
+.footer-middle{
+    padding-top: 10px;
+    grid-column: 2;
+    text-align: center;
+}
+.footer-address{
+    margin-bottom: 10px;
+}
+.footer-phone{
+
+}
+.footer-right{
+    padding-top: 10px;
+    grid-column: 3;
+}
+.brand-logo{
+    float: right;
+    /* background-color: blue; */
+}
+.brand-logo > *{
+    margin-right: 10px;
+}
+.brand-button{
+    border: none;
+    margin-left: 5px;
+    background: none;
+    cursor:pointer;
+}
+
 /* Landing Page */
 .banner{
     display: grid;
@@ -109,12 +149,15 @@ html, body{
     margin-bottom: 10px;
 }
 
-.logo{
+.logo-header{
     position: absolute;
-    top: 2px;
+    /* top: 2px; */
     left: 10px;
-    height: 90%;
-    width: 40px;
+    /* height: 90%;
+    width: 40px; */
+    /* border: none;
+    background: none;
+    cursor:pointer; */
 }
 
 .logo-landing{
@@ -273,7 +316,7 @@ html, body{
     grid-auto-rows: minmax(100px, auto);
 }
 .menu-left{
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
     background-color: whitesmoke;
 }
 .item-groups{
@@ -281,6 +324,11 @@ html, body{
     top: 15%;
     display: flex;
     flex-direction: column;
+}
+.item-groups p{
+    font-size: x-small;
+    margin-top: 20px;
+    padding-left: 10px;
 }
 .button{
     margin-bottom: 40px;
@@ -290,7 +338,7 @@ html, body{
 }
 
 .menu-middle{
-    grid-column: 3/ 11;
+    grid-column: 4/ 12;
     /* background-color: gainsboro; */
 }
 .menu-title{
@@ -351,8 +399,4 @@ html, body{
     /* background-color: lightgreen; */
     text-align: center;
     grid-column: 3;
-}
-.menu-right{
-    grid-column: 11/ 13;
-    /* background-color: goldenrod; */
 }
