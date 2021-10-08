@@ -95,11 +95,16 @@ html, body{
 }
 /* Landing Page */
 .banner{
-    background-image: url("../public/beer-tap.jpg");
+    display: grid;
+    justify-content: center;
+    /* grid-template-columns: repeat(3, 33.33%); */
+    gap: 5px;
+    grid-auto-rows: minmax(100px, 420px);
+    /* background-image: url("../public/beer-tap.jpg"); */
+    background-color: sienna;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    background-color: wheat;
     height: 920px;
     margin-bottom: 10px;
 }
@@ -112,20 +117,23 @@ html, body{
     width: 40px;
 }
 
-.banner-title-wrapper{
-    color: whitesmoke;
-    position: absolute;
-    width: 70%;
-    height: 40%;
-    top: 15%;
-    left: 15%;
-    margin: 0;
-    text-align: center;
-	font-size: 200px;
-    font-family: cursive;
-	-webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
+.logo-landing{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    /* padding-left: 20px; */
+    grid-column: 2;
 }
+
+.banner-title-1{
+    grid-column: 2;
+    color: whitesmoke;
+    text-align: center;
+	font-size: 25px;
+	/* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black; */
+}
+
 
 .landing-wrapper{
     height: 1000px;

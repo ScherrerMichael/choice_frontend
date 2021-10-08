@@ -4,14 +4,21 @@ import Header from './components/header'
 import React, { Component } from 'react';
 import MapContainer from './components/map';
 import Carousel from './components/carousel'
+import Image from 'next/image'
+import logo from '../public/logo.png'
 
 export default function Home({ data }) {
   return (
     <div className="container">
       <Header />
       <div className="banner">
-        <h1 className="banner-title-wrapper">
-          Choice Deli
+          <img
+              className="logo-landing"
+              src="/logo.png"
+              alt="Logo of Choice Deli"
+          ></img>
+        <h1 className="banner-title-1">
+          Restaurant - Bar - Conveniance
         </h1>
       </div>
       <div className="landing-wrapper">
