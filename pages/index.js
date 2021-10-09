@@ -10,11 +10,11 @@ export default function Home({ data }) {
     <div className="container">
       <Header />
       <div className="banner">
-          <img
-              className="logo-landing"
-              src="/logo.png"
-              alt="Logo of Choice Deli"
-          ></img>
+        <img
+          className="logo-landing"
+          src="/logo.png"
+          alt="Logo of Choice Deli"
+        ></img>
         <h1 className="banner-title-1">
           Restaurant - Bar - Grocery
         </h1>
@@ -25,10 +25,30 @@ export default function Home({ data }) {
             <h2>Delicious Food</h2>
             <p className="description">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available too.
             </p>
+            <div className="card-review-1">
+              <p className="card-text">
+                I was craving Korean chicken so I wanted to see what Seattle had to offer (I haven't lived here long).
+                I checked out Yelp reviews & photos, & they looked very good! I also checked their website to see the menu.
+                I've come here twice. Ordered Korean fried chicken both times. It's very good. A bit soggy though, I think that's because it steams up in the to-go box. I got the sweet n spicy. It has a nice kick. I like that it's not too sweet & even had a bit of tang, but I wish it were more saucy. Nonetheless, definitely worth coming back for.
+              </p>
+              <div className="card-graphic">
+                Gina B. - Yelp
+              </div>
+            </div>
+            <div className="card-review-2">
+              <p className="card-text">
+                I was craving Korean chicken so I wanted to see what Seattle had to offer (I haven't lived here long).
+                I checked out Yelp reviews & photos, & they looked very good! I also checked their website to see the menu.
+                I've come here twice. Ordered Korean fried chicken both times. It's very good. A bit soggy though, I think that's because it steams up in the to-go box. I got the sweet n spicy. It has a nice kick. I like that it's not too sweet & even had a bit of tang, but I wish it were more saucy. Nonetheless, definitely worth coming back for.
+              </p>
+              <div className="card-graphic">
+                Gina B. - Yelp
+              </div>
+            </div>
             <div className="button">
-            <Link
-            href="menu"
-            >Menu</Link>
+              <Link
+                href="menu"
+              >Menu</Link>
             </div>
           </div>
           <div className="section">
@@ -37,7 +57,7 @@ export default function Home({ data }) {
               Large selection of drinks from wine, craft beer from local breweries, and kegs*.
             </p>
             <p className="note">
-            *kegs must be ordered on or before tuesday for the week.
+              *kegs must be ordered on or before tuesday for the week.
             </p>
           </div>
           <div className="section">
@@ -46,9 +66,9 @@ export default function Home({ data }) {
               We have a convience store for all your daily needs. Also, stay tuned for special events such as block parties, and wine tastings!
             </p>
             <div className="button">
-            <Link
-            href="menu"
-            >Events</Link>
+              <Link
+                href="menu"
+              >Events</Link>
             </div>
           </div>
         </div>

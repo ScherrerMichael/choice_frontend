@@ -130,11 +130,10 @@ html, body{
 .banner{
     display: grid;
     justify-content: center;
-    /* grid-template-columns: repeat(3, 33.33%); */
-    gap: 5px;
+    grid-template-columns: repeat(3, 33.33%);
+    gap: 50px;
     grid-template-rows: repeat(2, 50%);
-    /* grid-auto-rows: minmax(100px, 420px); */
-    /* background-image: url("../public/beer-tap.jpg"); */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url("../public/beer-tap.jpg") ;
     background-color: sienna;
     background-repeat: no-repeat;
     background-size: cover;
@@ -159,7 +158,7 @@ html, body{
     grid-column: 2;
     color: whitesmoke;
     text-align: center;
-	font-size: 25px;
+	font-size: auto;
 }
 
 
@@ -185,6 +184,7 @@ html, body{
 }
 
 .landing-left h2{
+    grid-column: 1 / 5;
     background-color: black;
     color: whitesmoke;
     border-radius: 4px;
@@ -198,9 +198,60 @@ html, body{
     position: relative;
 }
 
+.section{
+    display: grid;
+    grid-auto-rows: auto;
+    overflow: auto;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(3, 30%);
+    column-gap: 10px;
+}
+
 .section .description{
+    grid-column: 1 / 5;
+    grid-row: 2;
     font-size: large;
     padding: 5px;
+}
+
+.card-review-1{
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+    position: absolute;
+    bottom: 10px;
+    background-color: gainsboro;
+    /* width: 25%; */
+    height: 60%;
+    margin-left: 10px;
+    border-radius: 10px;
+    overflow: auto;
+}
+.card-review-2{
+    grid-column: 2 / 3;
+    grid-row: 2 / 5;
+    position: absolute;
+    bottom: 10px;
+    background-color: gainsboro;
+    /* width: 25%; */
+    height: 60%;
+    margin-left: 10px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.card-text{
+    margin-top: 0;
+    padding: 10px;
+    height: 60%;
+    overflow-y: hidden;
+}
+
+.card-graphic{
+    position: absolute;
+    height: 20%;
+    bottom: 0;
+    width: 100%;
+    background-color: gold;
 }
 
 .section .button > a{
