@@ -23,7 +23,7 @@ export default function Home({ data }) {
         <div className="landing-left">
           <div className="section">
             <h2>Delicious Food</h2>
-            <p className="description">Hungry? Come try of our signature Teriyaki, and Combination meals. Online delivery, and phone order pick-up available too.
+            <p className="description">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available too.
             </p>
             <div className="button">
             <Link

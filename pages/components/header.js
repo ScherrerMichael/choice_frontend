@@ -21,8 +21,8 @@ class Header extends Component {
                 >
                     <a>
                     <img
-                    height={54}
-                        width={40}
+                        height={65}
+                        width={45}
                         src="/logo.png"
                         alt="Logo of Choice Deli"
                     ></img>
