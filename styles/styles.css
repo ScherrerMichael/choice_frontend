@@ -1,15 +1,16 @@
 /* Global */
+html, body{
+    margin:0;
+    padding: 0;
+    height: 100%;
+}
 
 
 /* Container */
 .container{
-    width: 100%;
+    min-height: 100%;
     position: relative;
-}
-
-html, body{
-    margin: 0px;
-    height: 100%;
+    width: 100%;
 }
 
 /* Nav Bar */
@@ -36,13 +37,11 @@ html, body{
     max-height: min-content;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    /* overflow-y: hidden; */
+    z-index: 10;
 }
 
 .nav-links{
     display: none;
-    z-index: 1000;
 }
 
 .link{
@@ -57,23 +56,18 @@ html, body{
 }
 
 .show-nav {
-    background-color: black;
+    /* z-index: -1; */
+    /* background-color: black; */
     text-align: center;
     width: 100%;
-    top: 50px;
+    top: 55px;
     position: absolute;
     display: block;
 }
 
+
 /* Media screen size */
 @media screen and (min-width: 768px) {
-    .nav-links{
-        position: absolute;
-        right: 0;
-        margin-top: 0px;
-        display:inline-flex;
-    }
-
     .hamburger {
         display: none;
     }
@@ -89,6 +83,8 @@ html, body{
 }
 /* Footer */
 .footer{
+    position: relative;
+    width: 100%;
     background-color: black;
     color: whitesmoke;
     height: 60px;
@@ -139,7 +135,8 @@ html, body{
     justify-content: center;
     /* grid-template-columns: repeat(3, 33.33%); */
     gap: 5px;
-    grid-auto-rows: minmax(100px, 420px);
+    grid-template-rows: repeat(2, 50%);
+    /* grid-auto-rows: minmax(100px, 420px); */
     /* background-image: url("../public/beer-tap.jpg"); */
     background-color: sienna;
     background-repeat: no-repeat;
@@ -164,7 +161,6 @@ html, body{
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    /* padding-left: 20px; */
     grid-column: 2;
 }
 
@@ -173,17 +169,17 @@ html, body{
     color: whitesmoke;
     text-align: center;
 	font-size: 25px;
-	/* -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black; */
 }
 
 
 .landing-wrapper{
-    height: 1000px;
+    position: relative;
+    height: 50%;
     display: grid;
-    grid-template-columns: repeat(2, 50);
+    justify-content: center;
+    grid-template-columns: repeat(3, 20%);
     gap: 10px;
-    grid-auto-rows: minmax(200px, auto);
+    /* padding-bottom: 60px; */
 }
 
 .landing-wrapper h3{
@@ -236,7 +232,7 @@ html, body{
 
 .carousel-wrapper{
     grid-column: 4 / 6;
-    grid-row: 1;
+    grid-row: 1 / 2;
     /* background-color: blue; */
 }
 
@@ -255,12 +251,13 @@ html, body{
 }
 
 .map-wrapper{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 90%;
     position: relative;
     grid-column: 4 / 6;
-    grid-row: 2 / 4;
+    grid-row: 2 / 3;
     background-color: whitesmoke;
-    display: grid;
-    grid-auto-rows: minmax(5px, auto);
 }
 
 .phone{
@@ -268,7 +265,8 @@ html, body{
 }
 
 .map{
-    height: 200px;
+    min-height: 200px;
+    width: 100%;
     position: relative;
 }
 
@@ -279,30 +277,28 @@ html, body{
 .schedule-wrapper{
     position: relative;
     grid-column: 4 / 6;
-    grid-row: 4 / 5;
+    grid-row: 3 / 5;
     background-color: whitesmoke;
 }
 
 .schedule{
-    position: absolute;
-    left: 10%;
-    top: 10%;
-    height: 80%;
-    width: 80%;
-    /* background-color: violet; */
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: center;
+    grid-template-columns: repeat(2, 50%);
     gap: 10px;
     grid-auto-rows: 30px;
 }
 
 .schedule .day{
-    /* background-color: thistle; */
+    text-align: center;
     grid-column: 1;
 }
 
 .schedule .time{
-    /* background-color: yellowgreen; */
+    text-align: center;
     grid-column: 2;
 }
 

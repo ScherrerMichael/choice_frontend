@@ -4,8 +4,6 @@ import Header from './components/header'
 import React, { Component } from 'react';
 import MapContainer from './components/map';
 import Carousel from './components/carousel'
-import Image from 'next/image'
-import logo from '../public/logo.png'
 
 export default function Home({ data }) {
   return (
@@ -63,6 +61,14 @@ export default function Home({ data }) {
           </div>
           <div>
 
+
+            <div className="phone">
+              <h3>
+                Phone:
+              </h3>
+              (206)-789-0211
+            </div>
+
             <div className="address">
               <h3>
                 Address:
@@ -70,13 +76,6 @@ export default function Home({ data }) {
               <a href="https://goo.gl/maps/5madDQdLQhr868rP7">
                 6415 8th Ave NW, Seattle, WA 98107
               </a>
-            </div>
-
-            <div className="phone">
-              <h3>
-                Phone:
-              </h3>
-              (206)-789-0211
             </div>
 
           </div>

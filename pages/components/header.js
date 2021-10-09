@@ -9,28 +9,12 @@ class Header extends Component {
         scrolled: false
     }
 
-    componentDidMount() {
-        window.addEventListener('scroll', this.listenToScroll);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.listenToScroll);
-    }
-
-    listenToScroll = () => {
-        if (window.scrollY > 400) {
-            this.setState({ scrolled: true })
-        } else {
-            this.setState({ scrolled: false })
-        }
-    }
-
     Toggle = () => {
         this.setState({ toggle: !this.state.toggle })
     }
     render() {
         return (<>
-            <div className={this.state.scrolled ? 'navBar nav-scrolled' : 'navBar'}>
+            <div className="navBar">
                 <div className="logo-header">
                 <Link
                 href="/"
@@ -48,8 +32,8 @@ class Header extends Component {
                 <button className="hamburger" onClick={this.Toggle}>
                     placeholder
                 </button>
-            <div className={this.state.toggle? "nav-links show-nav" : "nav-links"}>
-                <div className="link" href="#">
+            <div className={this.state.toggle? "show-nav" : "nav-links"}>
+                <div className="link">
                     <Link href="/">
                         <a>Home</a>
                     </Link>
