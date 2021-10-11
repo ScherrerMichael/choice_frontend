@@ -223,7 +223,6 @@ html, body{
     padding: 5px;
 }
 
-
 .section .button > a{
     position: absolute;
     bottom: 15px;
@@ -235,10 +234,7 @@ html, body{
 }
 
 .section .note{
-    position: absolute;
-    bottom: 5px;
-    font-size: small;
-    padding: 5px;
+    display: none;
 }
 
 .carousel-wrapper{
@@ -291,15 +287,18 @@ html, body{
     grid-row: 3 / 5;
     background-color: whitesmoke;
 }
+.schedule-title{
+    width: 100%;
+    background-color: rgb(224, 224, 224);
+}
 
 .schedule{
-    padding-top: 50%;
     position: relative;
     display: grid;
     padding-left: 5px;
     padding-right: 5px;
     justify-content: center;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
     grid-auto-rows: 30px;
 }
@@ -317,11 +316,10 @@ html, body{
 /* Menu */
 
 .menu-wrapper{
-    /* background-color:firebrick; */
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(fit-content, 1fr);
     gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    /* grid-auto-rows: minmax(100px, auto); */
 }
 .menu-left{
     min-width: fit-content;

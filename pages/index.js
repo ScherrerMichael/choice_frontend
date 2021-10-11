@@ -78,11 +78,18 @@ export default function Home({ data }) {
           </div>
         </div>
         <div className="schedule-wrapper" id="to-schedule">
+          <div className="schedule-title">Store Hours</div>
           <div className="schedule">
-            <ScheduleItem day="Mon - Th" time="7am - 12am" />
-            <ScheduleItem day="Fri" time="7am - 1pm" />
-            <ScheduleItem day="Sat" time="8am - 1am" />
-            <ScheduleItem day="Sun" time="8am - 12am" />
+            <ScheduleItem day="Mon - Th" time="7a - 12a" />
+            <ScheduleItem day="Fri" time="7a - 1p" />
+            <ScheduleItem day="Sat" time="8a - 1a" />
+            <ScheduleItem day="Sun" time="8a - 12a" />
+          </div>
+          <div className="schedule-title">Restaurant Hours</div>
+          <div className="schedule">
+            <ScheduleItem day="Mon - Th" time="8a - 11p" />
+            <ScheduleItem day="Fri - Sat" time="8a - 12a" />
+            <ScheduleItem day="Sun" time="8a - 11p" />
           </div>
         </div>
       </div>

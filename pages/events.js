@@ -6,7 +6,7 @@ export default function Menu({ data }) {
     return (
         <>
             <Header />
-            <div></div>
+            <div> hello </div>
             <Footer />
         </>
     );
