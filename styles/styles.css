@@ -201,10 +201,7 @@ html, body{
 }
 
 .section{
-    display: grid;
-    grid-auto-rows: auto;
-    overflow: auto;
-    grid-auto-rows: max-content;
+    overflow: hidden;
     grid-template-columns: repeat(3, 30%);
     column-gap: 10px;
 }
@@ -217,62 +214,33 @@ html, body{
 }
 
 .card-review-1{
-    text-align: center;
-    grid-column: 1 / 2;
-    grid-row: 2 / 5;
     position: absolute;
+    left: 10px;
     bottom: 10px;
+    height: 40%;
+    text-align: center;
     color: whitesmoke;
-    background-color: grey;
-    /* width: 25%; */
-    height: 60%;
+    background-color: rgb(143, 142, 142);
+    width: 50%;
     margin-left: 10px;
     border-radius: 10px;
-    overflow: hidden;
-}
-
-.card-review-2{
-    text-align: center;
-    grid-column: 1 / 3;
-    grid-row: 2 / 5;
-    position: absolute;
-    bottom: 10px;
-    color: whitesmoke;
-    background-color: grey;
-    /* width: 25%; */
-    height: 60%;
-    margin-left: 10px;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
 .card-text{
-    /* font-size: 90%; */
+    font-size: 80%;
     margin-top: 0;
     padding: 10px;
     height: 60%;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .card-graphic{
-    text-indent: 50%;
-    position: absolute;
-    height: 20%;
+    /* position: absolute; */
     bottom: 0;
-    width: 100%;
+    right: 0;
+    /* width: 100%; */
     background-color: whitesmoke;
     color: black;
-}
-
-.triangle-tilted{
-    z-index: 1;
-    position: relative;
-    margin-top: -18px;
-    margin-left: -20px;
-    width: 0;
-    height: 0;
-    border-right: 50px solid transparent;
-    border-top: 50px solid grey;
 }
 
 .section .button > a{

@@ -46,7 +46,7 @@ export default function Home({ data }) {
             <p className="description">
               Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
             </p>
-            <div className="card-review-2">
+            <div className="card-review-1">
               <p className="card-text">
                 "Their beer and fried chicken is absolutely amazing. Korean family owns this place and the Mom who does the cooking is clearly the secret weapon. Come for a pint and be sure to order food. Wow."
               </p>
