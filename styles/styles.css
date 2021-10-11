@@ -322,6 +322,7 @@ html, body{
 }
 
 .schedule{
+    padding-top: 50%;
     position: relative;
     display: grid;
     padding-left: 5px;
