@@ -90,9 +90,9 @@ html, body{
     height: 60px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 30%);
-    grid-template-rows: 50px;
-    gap: 2%;
+    grid-template-columns: repeat(3, minmax(15px, 1fr));
+    /* grid-template-rows: 50px; */
+    min-height: 60px;
 }
 .footer-left{
     padding-top: 10px;
@@ -105,7 +105,7 @@ html, body{
     text-align: center;
 }
 .footer-address{
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 .footer-phone{
 
