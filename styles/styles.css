@@ -395,6 +395,7 @@ html, body{
     margin-bottom: 15px;
     height: 50px;
     position: relative;
+    min-width: fit-content;
 }
 .group-par{
     font-size: large;
@@ -414,9 +415,8 @@ html, body{
     font-size: small;
 }
 .item-group{
-    /* background-color: azure; */
-    /* border: 1px solid black; */
-    min-width: fit-content;
+    position: relative;
+    min-height: 300px;
 }
 .group-text{
     font-weight: bold;
@@ -429,13 +429,24 @@ html, body{
     font-weight: bold;
     font-size: x-large;
     margin-bottom: 20px;
+    min-width: fit-content;
 }
 
 .item-name{
     grid-column: 1;
     height: 20px;
+    min-width: max-content;
 }
 .item-price{
     text-align: center;
     grid-column: 2;
+}
+
+.menu-img{
+    background-color: aqua;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
 }

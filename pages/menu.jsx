@@ -65,8 +65,8 @@ export default function Menu({ data }) {
                     </ItemGroup>
 
                     <ItemType refProp={KFC} parenthesis={"(Korean Fried Chicken)"} name={'KFC'}></ItemType>
-                    <ItemGroup>
                         <MenuDescription text="Choose: Original ~ Sweet & Sour ~ Sweet & Spicy" />
+                    <ItemGroup>
                         <MenuItem name="6 piece" price="$8.99" />
                         <MenuItem name="9 piece" price="$12.99" />
                         <MenuItem name="12 piece" price="$16.99" />
@@ -75,8 +75,8 @@ export default function Menu({ data }) {
                     </ItemGroup>
 
                     <ItemType refProp={Entrees} name={'ENTREES'}></ItemType>
-                    <ItemGroup>
                         <MenuDescription text="Choose: Yakisoba ~ Stir Fry ~ Fried Rice" />
+                    <ItemGroup>
                         <MenuItem name="Vegetable" price="$9.99" />
                         <MenuItem name="Tofu" price="$11.99" />
                         <MenuItem name="Chicken" price="$11.99" />
@@ -110,10 +110,10 @@ export default function Menu({ data }) {
                         <MenuItem name="Spicy Chicken & Katsu" price="$15.99" />
                         <MenuItem name="Chicken & Shrimp" price="$17.99" />
                         <MenuItem name="Chicken & Short Rib" price="$19.99" />
+                    </ItemGroup>
                         <MenuDescription text="All teriyaki dishes served with rice and salad" />
                         <MenuDescription text="$1.00 - make it spicy" />
                         <MenuDescription text="* Choice of Gyoza (4) OR Egg Roll (1)" />
-                    </ItemGroup>
 
                     <ItemType refProp={Specials} name={'SPECIALS'}></ItemType>
                     <ItemGroup>
@@ -161,10 +161,12 @@ const ItemGroup = (props) => {
         <div className="item-group">
             {props.children}
             <div className="group-text">{props.text}</div>
+            <img className="menu-img">hello</img>
         </div>
     ) : (
         <div className="item-group">
             {props.children}
+            <img className="menu-img" src="/Teriyaki2.jpg"/>
         </div>
     );
 };
