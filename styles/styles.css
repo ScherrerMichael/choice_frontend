@@ -223,35 +223,6 @@ html, body{
     padding: 5px;
 }
 
-.card-review-1{
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    height: 40%;
-    text-align: center;
-    color: whitesmoke;
-    background-color: rgb(143, 142, 142);
-    width: 50%;
-    margin-left: 10px;
-    border-radius: 10px;
-}
-
-.card-text{
-    font-size: 80%;
-    margin-top: 0;
-    padding: 10px;
-    height: 60%;
-    overflow-y: auto;
-}
-
-.card-graphic{
-    /* position: absolute; */
-    bottom: 0;
-    right: 0;
-    /* width: 100%; */
-    background-color: whitesmoke;
-    color: black;
-}
 
 .section .button > a{
     position: absolute;

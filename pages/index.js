@@ -25,16 +25,6 @@ export default function Home({ data }) {
             <h2>Delicious Food</h2>
             <p className="description">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available too.
             </p>
-            <div className="card-review-1">
-              <p className="card-text">
-                "The teriyaki is very solid, the KFC is good, and the Choice burger is actually one of my favorites in the area. My veg friend enjoys the yakisoba."
-              </p>
-              <div className="card-graphic">
-                James B. - Yelp
-                <div className="triangle-tilted">
-                </div>
-              </div>
-            </div>
             <div className="button">
               <Link
                 href="menu"
@@ -46,19 +36,6 @@ export default function Home({ data }) {
             <p className="description">
               Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
             </p>
-            <div className="card-review-1">
-              <p className="card-text">
-                "Their beer and fried chicken is absolutely amazing. Korean family owns this place and the Mom who does the cooking is clearly the secret weapon. Come for a pint and be sure to order food. Wow."
-              </p>
-              <div className="card-graphic">
-                Martin L - Yelp
-                <div className="triangle-tilted">
-                </div>
-              </div>
-            </div>
-            {/* <p className="note">
-              *kegs must be ordered on or before tuesday for the week.
-            </p> */}
           </div>
           <div className="section">
             <h2>Many More</h2>
