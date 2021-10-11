@@ -342,6 +342,7 @@ html, body{
     grid-auto-rows: minmax(100px, auto);
 }
 .menu-left{
+    min-width: fit-content;
     grid-column: 1 / 3;
     background-color: whitesmoke;
     position: relative;
@@ -375,7 +376,6 @@ html, body{
 
 .menu-middle{
     grid-column: 3/ 12;
-    /* background-color: gainsboro; */
     font-weight: bold;
 }
 .menu-title{
@@ -405,16 +405,18 @@ html, body{
 .item{
     padding-left: 15px;
     display: grid;
-    grid-template-columns: repeat(3, 250px);
+    grid-template-columns: minmax(105px, 1fr) minmax(0, 1fr) minmax(100px, 1fr);
     gap: 2px;
     margin-bottom: 20px;
 }
 .item-description{
+    grid-row: 2;
     font-size: small;
 }
 .item-group{
     /* background-color: azure; */
     /* border: 1px solid black; */
+    min-width: fit-content;
 }
 .group-text{
     font-weight: bold;
@@ -434,6 +436,6 @@ html, body{
     height: 20px;
 }
 .item-price{
-    /* text-align: center; */
-    grid-column: 3;
+    text-align: center;
+    grid-column: 2;
 }
