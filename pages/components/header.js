@@ -1,7 +1,5 @@
 import React, { Component, createRef } from 'react';
 import Link from 'next/link'
-import Image from 'next/image'
-import logo from '../../public/logo.png'
 
 class Header extends Component {
     state = {
@@ -34,22 +32,30 @@ class Header extends Component {
                 </button>
             <div className={this.state.toggle? "show-nav" : "nav-links"}>
                 <div className="link">
-                    <Link href="/">
+                    <Link href="/"
+                    onClick={this.Toggle}
+                    >
                         <a>Home</a>
                     </Link>
                 </div>
                 <div className="link" href="#">
-                    <Link href="/menu">
+                    <Link href="/menu"
+                    onClick={this.Toggle}
+                    >
                         <a>Menu</a>
                     </Link>
                 </div>
                 <div className="link" href="#">
-                    <Link href="/events">
+                    <Link href="/events"
+                    onClick={this.Toggle}
+                    >
                         <a>Events</a>
                     </Link>
                 </div>
                 <div className="link" href="#">
-                    <Link href="/#to-schedule">
+                    <Link href="/#to-schedule"
+                    onClick={this.Toggle}
+                    >
                         <a>Contact</a>
                     </Link>
                 </div>
