@@ -27,22 +27,12 @@ export default function Home({ data }) {
             </p>
             <div className="card-review-1">
               <p className="card-text">
-                I was craving Korean chicken so I wanted to see what Seattle had to offer (I haven't lived here long).
-                I checked out Yelp reviews & photos, & they looked very good! I also checked their website to see the menu.
-                I've come here twice. Ordered Korean fried chicken both times. It's very good. A bit soggy though, I think that's because it steams up in the to-go box. I got the sweet n spicy. It has a nice kick. I like that it's not too sweet & even had a bit of tang, but I wish it were more saucy. Nonetheless, definitely worth coming back for.
+                "The teriyaki is very solid, the KFC is good, and the Choice burger is actually one of my favorites in the area. My veg friend enjoys the yakisoba."
               </p>
               <div className="card-graphic">
-                Gina B. - Yelp
-              </div>
-            </div>
-            <div className="card-review-2">
-              <p className="card-text">
-                I was craving Korean chicken so I wanted to see what Seattle had to offer (I haven't lived here long).
-                I checked out Yelp reviews & photos, & they looked very good! I also checked their website to see the menu.
-                I've come here twice. Ordered Korean fried chicken both times. It's very good. A bit soggy though, I think that's because it steams up in the to-go box. I got the sweet n spicy. It has a nice kick. I like that it's not too sweet & even had a bit of tang, but I wish it were more saucy. Nonetheless, definitely worth coming back for.
-              </p>
-              <div className="card-graphic">
-                Gina B. - Yelp
+                James B. - Yelp
+                <div className="triangle-tilted">
+                </div>
               </div>
             </div>
             <div className="button">
@@ -54,11 +44,21 @@ export default function Home({ data }) {
           <div className="section">
             <h2>Variety Drinks</h2>
             <p className="description">
-              Large selection of drinks from wine, craft beer from local breweries, and kegs*.
+              Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
             </p>
-            <p className="note">
+            <div className="card-review-2">
+              <p className="card-text">
+                "Their beer and fried chicken is absolutely amazing. Korean family owns this place and the Mom who does the cooking is clearly the secret weapon. Come for a pint and be sure to order food. Wow."
+              </p>
+              <div className="card-graphic">
+                Martin L - Yelp
+                <div className="triangle-tilted">
+                </div>
+              </div>
+            </div>
+            {/* <p className="note">
               *kegs must be ordered on or before tuesday for the week.
-            </p>
+            </p> */}
           </div>
           <div className="section">
             <h2>Many More</h2>

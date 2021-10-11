@@ -110,8 +110,8 @@ export default function Menu({ data }) {
                         <MenuItem name="Spicy Chicken & Katsu" price="$15.99" />
                         <MenuItem name="Chicken & Shrimp" price="$17.99" />
                         <MenuItem name="Chicken & Short Rib" price="$19.99" />
-                        <MenuDescription text="all teriyaki dishes served with rice and salad" />
-                        <MenuDescription text="$1.00 make it spicy" />
+                        <MenuDescription text="All teriyaki dishes served with rice and salad" />
+                        <MenuDescription text="$1.00 - make it spicy" />
                         <MenuDescription text="* Choice of Gyoza (4) OR Egg Roll (1)" />
                     </ItemGroup>
 
@@ -198,6 +198,7 @@ class MenuItem extends Component {
         return (
             <div className="item">
                 <div className="item-name">{name}</div>
+                {/* <div className="item-elipses">...............................................................</div> */}
                 <div className="item-price">{price}</div>
                 {description ?
                     <div className="item-description">
