@@ -447,18 +447,20 @@ html, body{
     padding-left: 5px;
     padding-right: 5px;
     justify-content: center;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 30%);
     gap: 10px;
     grid-auto-rows: 30px;
 }
 .store-hours-title{
     position: relative;
     width: 100%;
+    height: fit-content;
 }
 
 .rest-hours-title{
     position: relative;
     width: 100%;
+    height: fit-content;
 }
 /* Menu */
 .menu-img{
