@@ -280,7 +280,8 @@ html, body{
 }
 
 .schedule-title{
-    text-align: left;
+    text-align: center;
+    background-color: rgb(221, 221, 221);
 }
 
 .schedule{
