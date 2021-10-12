@@ -66,30 +66,6 @@ html, body{
 }
 
 
-/* Media screen size */
-@media screen and (min-width: 768px) {
-    .hamburger {
-        display: none;
-    }
-
-    .nav-links {
-        background-color: #111;
-        position: absolute;
-        width:min-content;
-        top: 0;
-        right: 0;
-        display: flex;
-    }
-
-.menu-img{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 40%;
-    height: 100%;
-}
-
-}
 /* Footer */
 .footer{
     font-size: 70%;
@@ -142,9 +118,10 @@ html, body{
 .banner{
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, minmax(0x, 1fr));
-    gap: 50px;
-    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: minmax(0, auto) minmax(fit-content, fit-content), minmax(0, auto);
+    grid-template-rows: minmax(100px, 440px);
+    /* gap: 50px; */
+    /* grid-template-rows: repeat(2, 50%); */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url("../public/beer-tap.jpg") ;
     background-color: sienna;
     background-repeat: no-repeat;
@@ -170,7 +147,7 @@ html, body{
     grid-column: 2;
     color: whitesmoke;
     text-align: center;
-	font-size: auto;
+    font-size: 5vw;
 }
 
 
@@ -179,9 +156,9 @@ html, body{
     height: 50%;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 20%);
+    /* grid-template-columns: repeat(3, 20%); */
+    grid-template-rows: repeat(5, minmax(0, fit-content));
     gap: 10px;
-    /* padding-bottom: 60px; */
 }
 
 .landing-wrapper h3{
@@ -190,8 +167,8 @@ html, body{
 }
 
 .landing-left{
-    grid-column: 1 / 4;
-    grid-row: 1 / 5;
+    grid-column: 1 / 6;
+    grid-row: 1;
     background-color: whitesmoke;
 }
 
@@ -238,9 +215,8 @@ html, body{
 }
 
 .carousel-wrapper{
-    grid-column: 4 / 6;
-    grid-row: 1 / 2;
-    /* background-color: blue; */
+    grid-column: 1 / 6;
+    grid-row: 5;
 }
 
 .carousel{
@@ -262,8 +238,8 @@ html, body{
     justify-content: center;
     grid-template-columns: 90%;
     position: relative;
-    grid-column: 4 / 6;
-    grid-row: 2 / 3;
+    grid-column: 1 / 6;
+    grid-row: 3;
     background-color: whitesmoke;
 }
 
@@ -283,24 +259,35 @@ html, body{
 
 .schedule-wrapper{
     position: relative;
-    grid-column: 4 / 6;
-    grid-row: 3 / 5;
+    grid-column: 1 / 6;
+    grid-row: 4;
     background-color: whitesmoke;
 }
-.schedule-title{
-    width: 100%;
-    background-color: rgb(224, 224, 224);
+.store-hours-title{
+    text-align: center;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.rest-hours-title{
+    text-align: center;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: right;
 }
 
 .schedule{
     position: relative;
     display: grid;
-    padding-left: 5px;
-    padding-right: 5px;
+    /* padding-left: 5px;
+    padding-right: 5px; */
     justify-content: center;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, fit-content);
     gap: 10px;
-    grid-auto-rows: 30px;
+    grid-auto-rows: 1fr;
 }
 
 .schedule .day{
@@ -428,6 +415,52 @@ html, body{
 }
 
 @media screen and (min-width: 768px) {
+/* landing */
+.landing-left{
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
+    background-color: whitesmoke;
+}
+.carousel-wrapper{
+    grid-column: 4 / 6;
+    grid-row: 1 / 2;
+    /* background-color: blue; */
+}
+.map-wrapper{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 90%;
+    position: relative;
+    grid-column: 4 / 6;
+    grid-row: 2 / 3;
+    background-color: whitesmoke;
+}
+.schedule-wrapper{
+    position: relative;
+    grid-column: 4 / 6;
+    grid-row: 3 / 5;
+    background-color: whitesmoke;
+}
+.schedule{
+    position: relative;
+    display: grid;
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: center;
+    grid-template-columns: repeat(2, 50%);
+    gap: 10px;
+    grid-auto-rows: 30px;
+}
+.store-hours-title{
+    position: relative;
+    width: 100%;
+}
+
+.rest-hours-title{
+    position: relative;
+    width: 100%;
+}
+/* Menu */
 .menu-img{
     display: block;
     position: absolute;
@@ -436,6 +469,27 @@ html, body{
     width: 40%;
     height: 70%;
     /* add max height and with for to match images */
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-links {
+    background-color: #111;
+    position: absolute;
+    width:min-content;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.menu-img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
 }
 
 }
