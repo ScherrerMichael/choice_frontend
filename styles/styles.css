@@ -263,7 +263,7 @@ html, body{
     grid-row: 4;
     background-color: whitesmoke;
 }
-.store-hours-title{
+.store-hours{
     text-align: center;
     position: relative;
     width: 50%;
@@ -271,12 +271,16 @@ html, body{
     float: left;
 }
 
-.rest-hours-title{
+.rest-hours{
     text-align: center;
     position: relative;
     width: 50%;
     height: 100%;
     float: right;
+}
+
+.schedule-title{
+    text-align: left;
 }
 
 .schedule{
@@ -451,13 +455,13 @@ html, body{
     gap: 10px;
     grid-auto-rows: 30px;
 }
-.store-hours-title{
+.store-hours{
     position: relative;
     width: 100%;
     height: fit-content;
 }
 
-.rest-hours-title{
+.rest-hours{
     position: relative;
     width: 100%;
     height: fit-content;
