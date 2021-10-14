@@ -34,9 +34,9 @@ export default function Home({ data }) {
               >Menu</Link>
             </div>
           </div>
-        </div>
-        <div className="carousel-wrapper">
-          {/* <Carousel /> */}
+          <div className="gallery">
+            <img src="/choice_5.jpg"></img>
+          </div>
         </div>
         <div className="map-wrapper">
           <div className="map">

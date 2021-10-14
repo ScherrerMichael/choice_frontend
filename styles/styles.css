@@ -198,9 +198,9 @@ html, body{
 }
 
 .section .button > a{
-    position: absolute;
-    bottom: 15px;
-    right: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px solid black;
     padding: 10px;
     border-radius: 5px;
@@ -214,6 +214,15 @@ html, body{
 .carousel-wrapper{
     grid-column: 1 / 6;
     grid-row: 5;
+}
+
+.gallery{
+}
+
+.gallery img{
+    max-width: 300px;
+
+    background-size: cover;
 }
 
 .carousel{
@@ -431,6 +440,7 @@ html, body{
 @media screen and (min-width: 768px) {
 /* landing */
 .landing-left{
+    overflow: hidden;
     grid-column: 1 / 4;
     grid-row: 1 / 5;
     background-color: whitesmoke;
