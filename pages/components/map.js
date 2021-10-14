@@ -10,11 +10,11 @@ const mapStyles = {
 };
 
 const containerStyle = {
-  position: 'absolute',
-  width: '80%',
-  height: '80%',
-  left: '10%',
-  top: '10%',
+  // position: 'absolute',
+  // width: '80%',
+  // height: '80%',
+  // left: '10%',
+  // top: '10%',
 }
 
 export class MapContainer extends Component {
@@ -22,6 +22,7 @@ export class MapContainer extends Component {
     return (
       <Map
         containerStyle={containerStyle}
+        streetViewControl={false}
         className="map"
         google={this.props.google}
         zoom={13}

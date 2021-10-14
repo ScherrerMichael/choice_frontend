@@ -12,7 +12,7 @@ export default function Menu({ data }) {
     return (
         <>
             <Header />
-            <div className="menu-wrapper backgound-img">
+            <div className="menu-wrapper">
                 <div className="menu-left">
                     <div className="item-groups">
                         <button className="button" onClick={() => {
@@ -39,18 +39,18 @@ export default function Menu({ data }) {
                             Specials.current.scrollIntoView({ behavior: 'smooth' });
                         }}>Specials</button>
                     </div>
-                        <div className="menu-notes">
-                            <p>
-                                To-go box fee: $0.50
-                            </p>
-                            <p>
-                                Please order at least 10 minutes before closing time
-                            </p>
-                        </div>
                 </div>
                 <div className="menu-middle">
 
-                    <h2 className="menu-title">Menu</h2>
+                    <h1 className="menu-title">Menu</h1>
+                    <div className="menu-notes">
+                        <p>
+                            To-go box fee: $0.50
+                        </p>
+                        <p>
+                            Please order at least 10 minutes before closing time
+                        </p>
+                    </div>
                     <ItemType refProp={Appetizers} name={'APPETIZERS'}></ItemType>
                     <ItemGroup>
                         <MenuItem name="Egg Rolls (2)" price="$4.99"
@@ -65,7 +65,7 @@ export default function Menu({ data }) {
                     </ItemGroup>
 
                     <ItemType refProp={KFC} parenthesis={"(Korean Fried Chicken)"} name={'KFC'}></ItemType>
-                        <MenuDescription text="Choose: Original ~ Sweet & Sour ~ Sweet & Spicy" />
+                    <MenuDescription text="Choose: Original ~ Sweet & Sour ~ Sweet & Spicy" />
                     <ItemGroup>
                         <MenuItem name="6 piece" price="$8.99" />
                         <MenuItem name="9 piece" price="$12.99" />
@@ -75,7 +75,7 @@ export default function Menu({ data }) {
                     </ItemGroup>
 
                     <ItemType refProp={Entrees} name={'ENTREES'}></ItemType>
-                        <MenuDescription text="Choose: Yakisoba ~ Stir Fry ~ Fried Rice" />
+                    <MenuDescription text="Choose: Yakisoba ~ Stir Fry ~ Fried Rice" />
                     <ItemGroup>
                         <MenuItem name="Vegetable" price="$9.99" />
                         <MenuItem name="Tofu" price="$11.99" />
@@ -111,9 +111,9 @@ export default function Menu({ data }) {
                         <MenuItem name="Chicken & Shrimp" price="$17.99" />
                         <MenuItem name="Chicken & Short Rib" price="$19.99" />
                     </ItemGroup>
-                        <MenuDescription text="All teriyaki dishes served with rice and salad" />
-                        <MenuDescription text="$1.00 - make it spicy" />
-                        <MenuDescription text="* Choice of Gyoza (4) OR Egg Roll (1)" />
+                    <MenuDescription text="All teriyaki dishes served with rice and salad" />
+                    <MenuDescription text="$1.00 - make it spicy" />
+                    <MenuDescription text="* Includes Gyoza (4) OR Egg Roll (1)" />
 
                     <ItemType refProp={Specials} name={'SPECIALS'}></ItemType>
                     <ItemGroup>
@@ -158,15 +158,17 @@ class ItemType extends Component {
 //wrapper component
 const ItemGroup = (props) => {
     return props.text ? (
-        <div className="item-group">
-            {props.children}
-            <div className="group-text">{props.text}</div>
-            <img className="menu-img">hello</img>
+        <div className="item-wrapper">
+            <div className="item-group">
+                {props.children}
+                <div className="group-text">{props.text}</div>
+            </div>
         </div>
     ) : (
-        <div className="item-group">
-            {props.children}
-            <img className="menu-img" src="/Teriyaki2.jpg"/>
+        <div className="item-wrapper">
+            <div className="item-group">
+                {props.children}
+            </div>
         </div>
     );
 };
@@ -200,7 +202,6 @@ class MenuItem extends Component {
         return (
             <div className="item">
                 <div className="item-name">{name}</div>
-                {/* <div className="item-elipses">...............................................................</div> */}
                 <div className="item-price">{price}</div>
                 {description ?
                     <div className="item-description">
