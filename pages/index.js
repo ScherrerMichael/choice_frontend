@@ -22,8 +22,11 @@ export default function Home({ data }) {
       <div className="landing-wrapper">
         <div className="landing-left">
           <div className="section">
-            <h2>Delicious Food</h2>
-            <p className="description">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available too.
+            <h2>Delicious Food & Craft Beer</h2>
+            <p className="description">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available.
+            </p>
+            <p className="description">
+              Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
             </p>
             <div className="button">
               <Link
@@ -31,34 +34,15 @@ export default function Home({ data }) {
               >Menu</Link>
             </div>
           </div>
-          <div className="section">
-            <h2>Variety Drinks</h2>
-            <p className="description">
-              Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
-            </p>
-          </div>
-          <div className="section">
-            <h2>Many More</h2>
-            <p className="description">
-              We have a convience store for all your daily needs. Also, stay tuned for special events such as block parties, and wine tastings!
-            </p>
-            <div className="button">
-              <Link
-                href="menu"
-              >Events</Link>
-            </div>
-          </div>
         </div>
         <div className="carousel-wrapper">
-          <Carousel />
+          {/* <Carousel /> */}
         </div>
         <div className="map-wrapper">
           <div className="map">
             <MapContainer />
           </div>
           <div>
-
-
             <div className="phone">
               <h3>
                 Phone:
@@ -74,7 +58,6 @@ export default function Home({ data }) {
                 6415 8th Ave NW, Seattle, WA 98107
               </a>
             </div>
-
           </div>
         </div>
         <div className="schedule-wrapper" id="to-schedule">
