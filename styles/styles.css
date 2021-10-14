@@ -120,15 +120,12 @@ html, body{
     justify-content: center;
     grid-template-columns: minmax(0, auto) minmax(fit-content, fit-content), minmax(0, auto);
     grid-template-rows: minmax(100px, 440px);
-    /* gap: 50px; */
-    /* grid-template-rows: repeat(2, 50%); */
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url("../public/beer-tap.jpg") ;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url("../public/choice_2.jpg") ;
     background-color: sienna;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     height: 920px;
-    margin-bottom: 10px;
 }
 
 .logo-header{
