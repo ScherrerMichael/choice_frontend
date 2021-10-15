@@ -51,6 +51,19 @@ export default function Home({ data }) {
         <div className="map">
         <MapContainer/>
         </div>
+        <div className="location-text-wrapper">
+        <h2 className="location-title">Grab and go, or sip and relax</h2>
+        <p className="location-blurb">Pick up an espresso in the morning before work, or do some after-work unwinding by trying out a new locally brewed beer. Or Both. We also have a convience store for everything else in between. The Choice is yours in Ballard. </p>
+        </div>
+      </div>
+      <div className="events-wrapper">
+        <div className="events-wrapper">
+          <div className="events-title">
+            <div>
+              stay tuned for local events at Choice Deli
+            </div>
+          </div>
+          </div>
       </div>
       <Footer />
     </div>
