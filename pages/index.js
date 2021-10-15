@@ -11,12 +11,9 @@ export default function Home({ data }) {
       <Header />
       <div className="landing-wrapper">
         <div className="landing-left">
-          <div className="section">
+          <div className="section left">
             <h2>Delicious Food & Craft Beer</h2>
             <p className="description">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available.
-            </p>
-            <p className="description">
-              Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
             </p>
           </div>
         </div>
@@ -55,8 +52,11 @@ export default function Home({ data }) {
           <h2 className="section-title">Grab And Go / Sip And Relax</h2>
           <p className="blurb">Pick up an espresso in the morning before work, or do some after-work unwinding by trying out a new locally brewed beer. Or Both.The Choice is yours in Ballard. </p>
           <p className="blurb">(We also have a convience store for everything else in between.)</p>
-          <h3>Location</h3>
-          <p>6415 8th Ave NW, Seattle, WA 98107</p>
+          <p className="blurb">
+            Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
+          </p>
+          <h3 className="schedule-title">Location</h3>
+          <p className="blurb">6415 8th Ave NW, Seattle, WA 98107</p>
         </div>
       </div>
       <div className="events-wrapper">
@@ -65,13 +65,13 @@ export default function Home({ data }) {
             Invested in the Community
           </h2>
           <p className="blurb">
-            It's been a rough couple of years, stay tuned for local events such as: concerts, wine tastings, and block parties!
+            Stay tuned for local events such as: concerts, wine tastings, and block parties!
           </p>
         </div>
         <div className="right">
           <h2 className="section-title">See what others have to say</h2>
           <div className="carousel-wrapper">
-          <Carousel/>
+            <Carousel />
           </div>
         </div>
       </div>
