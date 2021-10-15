@@ -6,7 +6,6 @@ import MapContainer from './components/map';
 import Carousel from './components/carousel'
 
 export default function Home({ data }) {
-  console.log('api key is: ' + process.env.NEXT_PUBLIC_MAPS_API_KEY)
   return (
     <div className="container">
       <Header />
