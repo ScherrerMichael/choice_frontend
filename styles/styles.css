@@ -125,19 +125,21 @@ html, body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 920px;
+    /* width: 3024px; */
+    height: 4032px;
 }
 
 .logo-header{
     position: absolute;
-    left: 10px;
 }
 
 .logo-landing{
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    grid-column: 2;
+    grid-column: 4;
+    grid-row: 1;
+
 }
 
 .banner-title-1{
@@ -149,13 +151,16 @@ html, body{
 
 
 .landing-wrapper{
+    background-color: black;
     position: relative;
-    height: 50%;
     display: grid;
+    grid-template-columns: repeat(5, 20%);
     justify-content: center;
-    /* grid-template-columns: repeat(3, 20%); */
-    grid-template-rows: repeat(5, minmax(0, fit-content));
-    /* gap: 10px; */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url("../public/choice_1.jpg") ;
+    background-color: sienna;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
 }
 
 .landing-wrapper h3{
@@ -163,10 +168,16 @@ html, body{
     margin-bottom: 0;
 }
 
-.landing-left{
-    grid-column: 1 / 6;
-    grid-row: 1;
+.button-menu{
+    grid-column: 2;
+    grid-row: 2;
+    margin: auto;
     background-color: whitesmoke;
+}
+
+.landing-left{
+    grid-column: 1 / 2;
+    grid-row: 1;
 }
 
 .landing-left h2{
@@ -177,11 +188,13 @@ html, body{
     padding: 5px;
     margin-left: 2px;
     margin-top: 0;
+    color: orange;
 }
 
 .landing-left .section{
     height: 310px;
     position: relative;
+    color: whitesmoke;
 }
 
 .section{
@@ -254,8 +267,10 @@ html, body{
 }
 
 .map{
-    min-height: 200px;
-    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    /* min-height: 200px; */
+    width: 50%;
     position: relative;
 }
 
@@ -263,21 +278,20 @@ html, body{
     text-align: center;
 }
 
-.schedule-wrapper{
-    position: relative;
-    grid-column: 1 / 6;
-    grid-row: 4;
-    background-color: whitesmoke;
-}
 .store-hours{
+    color: whitesmoke;
+    grid-column: 3;
+    grid-row: 2 /3;
     text-align: center;
     position: relative;
-    width: 50%;
     height: 100%;
     float: left;
 }
 
 .rest-hours{
+    color: whitesmoke;
+    grid-column: 3;
+    grid-row: 3;
     text-align: center;
     position: relative;
     width: 50%;
@@ -287,28 +301,28 @@ html, body{
 
 .schedule-title{
     text-align: center;
-    background-color: rgb(221, 221, 221);
 }
 
 .schedule{
     position: relative;
-    display: grid;
+    min-width: 100px;
+    /* display: grid; */
     /* padding-left: 5px;
     padding-right: 5px; */
-    justify-content: center;
-    grid-template-columns: repeat(2, fit-content);
-    gap: 10px;
-    grid-auto-rows: 1fr;
+    /* justify-content: center; */
+    /* grid-template-columns: repeat(2, fit-content); */
+    /* gap: 10px; */
+    /* grid-auto-rows: 1fr; */
 }
 
 .schedule .day{
-    text-align: center;
-    grid-column: 1;
+    text-align: left;
+    width: fit-content;
 }
 
 .schedule .time{
-    text-align: center;
-    grid-column: 2;
+    float: right;
+    padding-left: 10px;
 }
 
 /* Menu */
@@ -346,6 +360,7 @@ html, body{
 }
 
 .menu-middle{
+    background-color: teal;
     grid-column: 3 /4;
     font-weight: bold;
 }
@@ -436,14 +451,20 @@ html, body{
     display: none;
 }
 
+.location-wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    background-color: teal;
+    height: 1000px;
+}
+
 
 @media screen and (min-width: 768px) {
 /* landing */
 .landing-left{
     overflow: hidden;
-    grid-column: 1 / 4;
-    grid-row: 1 / 5;
-    background-color: whitesmoke;
+    grid-column: 2 / 3;
 }
 .carousel-wrapper{
     grid-column: 4 / 6;
@@ -454,36 +475,18 @@ html, body{
     justify-content: center;
     grid-template-columns: 90%;
     position: relative;
-    grid-column: 4 / 6;
-    grid-row: 2 / 3;
+    grid-column: 3 / 4;
     background-color: whitesmoke;
 }
 .schedule-wrapper{
+    color: whitesmoke;
     position: relative;
-    grid-column: 4 / 6;
+    grid-column: 3 / 5;
     grid-row: 3 / 5;
-    background-color: whitesmoke;
 }
 .schedule{
     position: relative;
-    display: grid;
-    padding-left: 5px;
-    padding-right: 5px;
-    justify-content: center;
-    grid-template-columns: repeat(2, 30%);
-    gap: 10px;
-    grid-auto-rows: 30px;
-}
-.store-hours{
-    position: relative;
     width: 100%;
-    height: fit-content;
-}
-
-.rest-hours{
-    position: relative;
-    width: 100%;
-    height: fit-content;
 }
 /* Menu */
 
