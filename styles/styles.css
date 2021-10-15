@@ -222,11 +222,6 @@ html, body{
     display: none;
 }
 
-.carousel-wrapper{
-    grid-column: 1 / 6;
-    grid-row: 5;
-}
-
 .carousel{
     height: 100% !important;
     background-color: black;
@@ -237,14 +232,6 @@ html, body{
     padding: 10px;
 }
 
-.carousel-root{
-    height: 100% !important;
-}
-.location-text-wrapper{
-    margin-left: 10px;
-    padding: 10px;
-}
-
 .location-wrapper{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -252,35 +239,51 @@ html, body{
     height: 500px;
 }
 
-.location-title{
+.section-title{
     position: relative;
-    grid-column: 2;
-    grid-row: 1;
     color: orange;
 }
-.location-blurb{
+.blurb{
     position: relative;
-    grid-row: 1;
-    grid-column: 2;
     height: fit-content;
     color: whitesmoke;
-     /* background-color: whitesmoke;
-     height: fit-content;
-     width: fit-content;
-     margin-left: auto;
-     padding-right: 10px; */
+}
+
+.slide{
+    min-height: 300px;
+    border-radius: 15px;
+}
+
+.review{
+    background-color: whitesmoke;
+    color: gray;
+}
+
+.left{
+    grid-row: 1;
+    grid-column: 1;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.right{
+    grid-row: 1;
+    grid-column: 2;
+    margin-left: 10px;
+    padding: 10px;
 }
 
 .events-wrapper{
-    background-color: violet;
+    background-color: black;
     height: 500px;
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
 .events-title{
-    background-color: tomato;
+    color: tomato;
 }
+
 
 .phone{
     text-align:center;
@@ -375,7 +378,6 @@ html, body{
 }
 
 .menu-middle{
-    background-color: teal;
     grid-column: 3 /4;
     font-weight: bold;
 }

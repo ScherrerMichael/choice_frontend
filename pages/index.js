@@ -21,11 +21,11 @@ export default function Home({ data }) {
           </div>
         </div>
         <img className="logo-landing" src="/logo.png" />
-            <div className="button-menu">
-              <Link
-                href="menu"
-              >Menu</Link>
-            </div>
+        <div className="button-menu">
+          <Link
+            href="menu"
+          >Menu</Link>
+        </div>
         <div className="store-hours">
           <div className="schedule-title">Store Hours</div>
           <div className="schedule">
@@ -35,35 +35,45 @@ export default function Home({ data }) {
             <ScheduleItem day="Sunday" time="8a - 12a" />
           </div>
         </div>
-          <div className="rest-hours">
-            <div className="schedule-title">
-              Restaurant Hours
-            </div>
-            <div className="schedule">
-              <ScheduleItem day="Monday - Thursday" time="8a - 11p" />
-              <ScheduleItem day="Friday - Saturday" time="8a - 12a" />
-              <ScheduleItem day="Sunday" time="8a - 11p" />
-            </div>
+        <div className="rest-hours">
+          <div className="schedule-title">
+            Restaurant Hours
           </div>
+          <div className="schedule">
+            <ScheduleItem day="Monday - Thursday" time="8a - 11p" />
+            <ScheduleItem day="Friday - Saturday" time="8a - 12a" />
+            <ScheduleItem day="Sunday" time="8a - 11p" />
+          </div>
+        </div>
       </div>
       {/* <Carousel/> */}
       <div className="location-wrapper">
         <div className="map">
-        <MapContainer/>
+          <MapContainer />
         </div>
-        <div className="location-text-wrapper">
-        <h2 className="location-title">Grab and go, or sip and relax</h2>
-        <p className="location-blurb">Pick up an espresso in the morning before work, or do some after-work unwinding by trying out a new locally brewed beer. Or Both. We also have a convience store for everything else in between. The Choice is yours in Ballard. </p>
+        <div className="right">
+          <h2 className="section-title">Grab And Go / Sip And Relax</h2>
+          <p className="blurb">Pick up an espresso in the morning before work, or do some after-work unwinding by trying out a new locally brewed beer. Or Both.The Choice is yours in Ballard. </p>
+          <p className="blurb">(We also have a convience store for everything else in between.)</p>
+          <h3>Location</h3>
+          <p>6415 8th Ave NW, Seattle, WA 98107</p>
         </div>
       </div>
       <div className="events-wrapper">
-        <div className="events-wrapper">
-          <div className="events-title">
-            <div>
-              stay tuned for local events at Choice Deli
-            </div>
+        <div className="left">
+          <h2 className="section-title">
+            Invested in the Community
+          </h2>
+          <p className="blurb">
+            It's been a rough couple of years, stay tuned for local events such as: concerts, wine tastings, and block parties!
+          </p>
+        </div>
+        <div className="right">
+          <h2 className="section-title">See what others have to say</h2>
+          <div className="carousel-wrapper">
+          <Carousel/>
           </div>
-          </div>
+        </div>
       </div>
       <Footer />
     </div>
