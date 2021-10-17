@@ -21,7 +21,7 @@ export default function Home({ data }) {
         <img className="logo-landing" src="/logo.png" />
         <div className="button-menu">
           <Link
-            href="menu"
+            href="/menu"
           >Menu</Link>
         </div>
         <div className="store-hours">
@@ -65,9 +65,6 @@ export default function Home({ data }) {
           <h2 className="section-title">
             Invested in the Community
           </h2>
-          <p className="blurb">
-            Stay tuned for local events such as: concerts, wine tastings, and block parties!
-          </p>
           <Subscribe/>
         </div>
         <div className="right">
@@ -96,8 +93,8 @@ class ScheduleItem extends Component {
     return (
       <>
         <div className="day">{day}:
-          <div className="time">{time}</div>
         </div>
+          <div className="time">{time}</div>
       </>
     );
   }

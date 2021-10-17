@@ -37,7 +37,7 @@ export default function Subscribe() {
   return (
     <div id="subscribe-wrapper">
         <p className="subscribe-text-large">Subscribe to the newsletter</p>
-        <p className="subscribe-text-small">Get emails about events</p>
+        <p className="subscribe-text-small">Get emails about local events such as concerts, block parties, wine tastings, and more!</p>
     <form onSubmit={subscribe}>
       <input
         id="email-input"

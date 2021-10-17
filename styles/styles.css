@@ -15,6 +15,10 @@ html, body{
 }
 
 /* Nav Bar */
+.logo-header{
+    position: absolute;
+}
+
 .hidden{
     display: none;
 }
@@ -113,47 +117,15 @@ html, body{
     cursor:pointer;
 }
 
-/* Landing Page */
-.banner{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: minmax(0, auto) minmax(fit-content, fit-content), minmax(0, auto);
-    grid-template-rows: minmax(100px, 440px);
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)), url("../public/choice_2.jpg") ;
-    background-color: sienna;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    /* width: 3024px; */
-    height: 4032px;
-}
-
-.logo-header{
-    position: absolute;
-}
-
-.logo-landing{
-    position: relative;
-    grid-column: 3;
-    grid-row: 1;
-    width: 100%;
-
-}
-
-.banner-title-1{
-    grid-column: 2;
-    color: whitesmoke;
-    text-align: center;
-    font-size: 5vw;
-}
-
+/* Landing Page mobile*/
 
 .landing-wrapper{
     background-color: black;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 25%);
-    grid-template-rows: repeat(3, 25%);
+    grid-template-columns: repeat(3, minmax(25%, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    /* grid-template-rows: repeat(3, 25%); */
     justify-content: center;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7)), url("../public/choice_1.jpg") ;
     background-color: sienna;
@@ -161,18 +133,29 @@ html, body{
     background-size: cover;
     min-height: 700px;
 }
-
-.landing-wrapper h3{
-    margin-left: 10px;
-    margin-bottom: 0;
+.landing-left{
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    position: relative;
+    height: fit-content;
+    grid-column: 1 / 4;
+    grid-row: 2;
 }
+.logo-landing{
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
 
+}
 .button-menu{
-    grid-column: 1;
-    grid-row: 3;
+    grid-column: 2;
+    grid-row: 2;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: auto;
+    margin-bottom: 30px;
     background-color: black;
     width: 100px;
     height: 50px;
@@ -187,221 +170,56 @@ html, body{
     line-height: 50px;
     vertical-align: middle;
 }
-
-.landing-left{
-    height: fit-content;
+.store-hours{
+    height: 50%;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: whitesmoke;
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 3;
 }
-
+.rest-hours{
+    height: 50%;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: whitesmoke;
+    grid-column: 2;
+    grid-row: 3;
+}
 .landing-left h2{
-    grid-column: 1 / 5;
-    /* background-color: black; */
-    /* color: whitesmoke; */
     border-radius: 4px;
     padding: 5px;
     margin-left: 2px;
     margin-top: 0;
     color: orange;
 }
-
 .landing-left .section{
-    height: 310px;
     position: relative;
     color: whitesmoke;
 }
-
-.section{
-    grid-column: 1;
-    grid-template-columns: repeat(3, 30%);
-    column-gap: 10px;
-}
-
-.section .description{
-    grid-column: 1 / 5;
-    grid-row: 2;
-    font-size: large;
-    padding: 5px;
-}
-
-.section .button > a{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid black;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.section .note{
-    display: none;
-}
-
-.carousel-slider{
-    height: 100%;
-}
-
-.carousel-root{
-    box-sizing: border-box;
-    position: absolute;
-    /* max-height: 90%; */
-    width: 90%;
-    bottom: 20px;
-}
-
-.control-dots{
-    background-color: black;
-}
-
-/* .carousel-slider{
-    height: 300px;
-} */
-
-.slide div{
-    height: 100% !important;
-    padding: 10px;
-}
-
-.location-wrapper{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: teal;
-    height: 500px;
-}
-
-.section-title{
-    position: relative;
-    color: orange;
-}
-.blurb{
-    position: relative;
-    height: fit-content;
-    color: whitesmoke;
-}
-
-.review{
-    background-color: whitesmoke;
-    color: gray;
-}
-
-.left{
-    position: relative;
-    grid-row: 1;
-    grid-column: 1;
-    margin-right: 10px;
-    padding: 10px;
-}
-
-.right{
-    position: relative;
-    grid-row: 1;
-    grid-column: 2;
-    margin-left: 10px;
-    padding: 10px;
-}
-
-.events-wrapper{
-    position: relative;
-    background-color: black;
-    height: 500px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-}
-
-.events-title{
-    color: tomato;
-}
-
-
-.phone{
-    text-align:center;
-}
-
-.map{
-    grid-column: 1;
-    grid-row: 1;
-    position: relative;
-}
-
-.address{
-    text-align: center;
-}
-
-.store-hours{
-    color: whitesmoke;
-    grid-column: 2 / 4;
-    grid-row: 2 ;
-    position: relative;
-    height: 100%;
-    float: left;
-}
-
-.rest-hours{
-    color: whitesmoke;
-    grid-column: 2 / 4;
-    grid-row: 3;
-    position: relative;
-    height: 100%;
-    float: right;
-}
-
 .schedule-title{
     text-align: left;
     color: orangered;
     font-size: large;
 }
-
 .schedule{
+    display: grid;
+    grid-template-columns: 50% 50%;
     position: relative;
     min-width: 100px;
 }
 
 .schedule .day{
-    text-align: left;
-    width: fit-content;
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px;
     font-size: smaller;
 }
-
 .schedule .time{
-    float: right;
+    width: 100%;
     padding-left: 10px;
-}
-
-#form-label{
-    color: whitesmoke;
-}
-
-#email-input{
-    width: 90%;
-    box-sizing: border-box;
-    min-height: 40px;
-    margin-left: 20px;
-}
-
-.subscribe-text-large{
-    color: whitesmoke;
-    padding-left: 20px;
-    font-size: larger;
-}
-
-.subscribe-text-small{
-    color: whitesmoke;
-    padding-left: 20px;
-}
-
-#subscribe-button{
-    margin-left: -130px;
-}
-
-#subscribe-wrapper{
-    box-sizing: border-box;
-    position: absolute;
-    width: 90%;
-    bottom: 20px;
-    border: tomato 2px solid;
-    border-radius: 10px;
 }
 
 /* Menu */
@@ -530,27 +348,232 @@ html, body{
 }
 
 
-
+/*  Desktop */
 @media screen and (min-width: 768px) {
 /* landing */
-.map-wrapper{
+.landing-wrapper{
+    background-color: black;
+    position: relative;
     display: grid;
+    grid-template-columns: repeat(3, 25%);
+    grid-template-rows: repeat(3, 25%);
     justify-content: center;
-    grid-template-columns: 90%;
-    position: relative;
-    grid-column: 3 / 4;
-    background-color: whitesmoke;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7)), url("../public/choice_1.jpg") ;
+    background-color: sienna;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
 }
-.schedule-wrapper{
-    color: whitesmoke;
+.landing-left{
+    height: fit-content;
+    grid-column: 1;
+    grid-row: 1;
+}
+.logo-landing{
     position: relative;
-    grid-column: 3 / 5;
-    grid-row: 3 / 5;
+    grid-column: 3;
+    grid-row: 1;
+    width: 100%;
+
+}
+.button-menu{
+    grid-column: 1;
+    grid-row: 3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: black;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    border: orangered 2px solid;
+}
+.button-menu a{
+    text-decoration: none;
+    color: whitesmoke;
+    line-height: 50px;
+    vertical-align: middle;
+}
+.landing-left h2{
+    grid-column: 1 / 5;
+    /* background-color: black; */
+    /* color: whitesmoke; */
+    border-radius: 4px;
+    padding: 5px;
+    margin-left: 2px;
+    margin-top: 0;
+    color: orange;
+}
+
+.landing-left .section{
+    position: relative;
+    color: whitesmoke;
+}
+.carousel-slider{
+    height: 100%;
+}
+
+.slider{
+    height: 400px !important;
+}
+
+.carousel-root{
+    box-sizing: border-box;
+    height: 90%;
+}
+
+.control-dots{
+    background-color: black;
+}
+.slide div{
+    height: 100% !important;
+    padding: 10px;
+}
+
+.location-wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: teal;
+    height: 500px;
+}
+
+.section-title{
+    position: relative;
+    color: orange;
+}
+.blurb{
+    position: relative;
+    height: fit-content;
+    color: whitesmoke;
+}
+
+.review{
+    background-color: whitesmoke;
+    color: gray;
+}
+
+.left{
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.right{
+    position: relative;
+    grid-row: 1;
+    grid-column: 2;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.events-wrapper{
+    position: relative;
+    background-color: black;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+}
+
+.events-title{
+    color: tomato;
+}
+
+
+.phone{
+    text-align:center;
+}
+
+.map{
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+}
+
+.address{
+    text-align: center;
+}
+
+.store-hours{
+    color: whitesmoke;
+    grid-column: 2;
+    grid-row: 2 ;
+    position: relative;
+    height: 100%;
+    float: left;
+}
+
+.rest-hours{
+    color: whitesmoke;
+    grid-column: 2;
+    grid-row: 3;
+    position: relative;
+    height: 100%;
+    float: right;
+}
+
+.schedule-title{
+    text-align: left;
+    color: orangered;
+    font-size: large;
 }
 .schedule{
+    display: grid;
+    grid-template-columns: minmax(0, fit-content) auto;
     position: relative;
-    width: 100%;
+    min-width: 100px;
 }
+
+.schedule .day{
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px;
+    font-size: smaller;
+}
+.schedule .time{
+    width: 100%;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#form-label{
+    color: whitesmoke;
+}
+
+#email-input{
+    width: 90%;
+    box-sizing: border-box;
+    min-height: 40px;
+    margin-left: 20px;
+}
+
+.subscribe-text-large{
+    color: whitesmoke;
+    padding-left: 20px;
+    font-size: larger;
+}
+
+.subscribe-text-small{
+    color: whitesmoke;
+    padding-left: 20px;
+}
+
+#subscribe-button{
+    margin-left: -130px;
+}
+
+#subscribe-wrapper{
+    box-sizing: border-box;
+    position: absolute;
+    width: 90%;
+    bottom: 20px;
+    border: tomato 2px solid;
+    border-radius: 10px;
+}
+
 /* Menu */
 
 .hamburger {
