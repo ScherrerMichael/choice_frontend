@@ -4,6 +4,7 @@ import Header from './components/header'
 import React, { Component } from 'react';
 import MapContainer from './components/map';
 import Carousel from './components/carousel'
+import Subscribe from './components/subscribe'
 
 export default function Home({ data }) {
   return (
@@ -67,12 +68,11 @@ export default function Home({ data }) {
           <p className="blurb">
             Stay tuned for local events such as: concerts, wine tastings, and block parties!
           </p>
+          <Subscribe/>
         </div>
         <div className="right">
           <h2 className="section-title">See what others have to say</h2>
-          <div className="carousel-wrapper">
             <Carousel />
-          </div>
         </div>
       </div>
       <Footer />

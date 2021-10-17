@@ -6,7 +6,6 @@ html, body{
     font-weight: bold;
 }
 
-
 /* Container */
 .container{
     min-height: 100%;
@@ -239,10 +238,25 @@ html, body{
     display: none;
 }
 
-.carousel{
-    height: 100% !important;
+.carousel-slider{
+    height: 100%;
+}
+
+.carousel-root{
+    box-sizing: border-box;
+    position: absolute;
+    /* max-height: 90%; */
+    width: 90%;
+    bottom: 20px;
+}
+
+.control-dots{
     background-color: black;
 }
+
+/* .carousel-slider{
+    height: 300px;
+} */
 
 .slide div{
     height: 100% !important;
@@ -266,16 +280,13 @@ html, body{
     color: whitesmoke;
 }
 
-.slide{
-    min-height: 300px;
-}
-
 .review{
     background-color: whitesmoke;
     color: gray;
 }
 
 .left{
+    position: relative;
     grid-row: 1;
     grid-column: 1;
     margin-right: 10px;
@@ -283,6 +294,7 @@ html, body{
 }
 
 .right{
+    position: relative;
     grid-row: 1;
     grid-column: 2;
     margin-left: 10px;
@@ -290,10 +302,12 @@ html, body{
 }
 
 .events-wrapper{
+    position: relative;
     background-color: black;
     height: 500px;
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
 }
 
 .events-title{
@@ -353,6 +367,41 @@ html, body{
 .schedule .time{
     float: right;
     padding-left: 10px;
+}
+
+#form-label{
+    color: whitesmoke;
+}
+
+#email-input{
+    width: 90%;
+    box-sizing: border-box;
+    min-height: 40px;
+    margin-left: 20px;
+}
+
+.subscribe-text-large{
+    color: whitesmoke;
+    padding-left: 20px;
+    font-size: larger;
+}
+
+.subscribe-text-small{
+    color: whitesmoke;
+    padding-left: 20px;
+}
+
+#subscribe-button{
+    margin-left: -130px;
+}
+
+#subscribe-wrapper{
+    box-sizing: border-box;
+    position: absolute;
+    width: 90%;
+    bottom: 20px;
+    border: tomato 2px solid;
+    border-radius: 10px;
 }
 
 /* Menu */
@@ -484,10 +533,6 @@ html, body{
 
 @media screen and (min-width: 768px) {
 /* landing */
-.carousel-wrapper{
-    grid-column: 4 / 6;
-    grid-row: 1 / 2;
-}
 .map-wrapper{
     display: grid;
     justify-content: center;
