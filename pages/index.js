@@ -14,7 +14,7 @@ export default function Home({ data }) {
         <div className="landing-left">
           <div className="section left">
             <h2>Delicious Food & Craft Beer</h2>
-            <p className="description">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available.
+            <p className="blurb">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available.
             </p>
           </div>
         </div>
@@ -64,9 +64,6 @@ export default function Home({ data }) {
       </div>
       <div className="events-wrapper">
         <div className="left m-subscribe">
-          <h2 className="section-title m-middle">
-            Invested in the Community
-          </h2>
           <Subscribe/>
         </div>
         <div className="right m-reviews">

@@ -47,7 +47,7 @@ export default function Subscribe() {
         required
         type="email"
       />
-      <button id="subscribe-button" type="submit">{'✨ Subscribe 💌'}</button>
+      <button id="subscribe-button" type="submit">{'Subscribe'}</button>
       <div>
         {message
           ? message
