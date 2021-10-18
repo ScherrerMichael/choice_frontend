@@ -54,7 +54,7 @@ export default function Home({ data }) {
           <MapContainer />
         </div>
         <div className="right">
-          <h2 className="section-title">Grab And Go / Sip And Relax</h2>
+          <h2 className="section-title m-middle">Grab And Go / Sip And Relax</h2>
           <p className="blurb">Pick up an espresso in the morning before work, or do some after-work unwinding by trying out a new locally brewed beer. Or Both.The Choice is yours in Ballard. </p>
           <p className="blurb">(We also have a convience store for everything else in between.)</p>
           <p className="blurb">
@@ -64,13 +64,13 @@ export default function Home({ data }) {
       </div>
       <div className="events-wrapper">
         <div className="left m-subscribe">
-          <h2 className="section-title">
+          <h2 className="section-title m-middle">
             Invested in the Community
           </h2>
           <Subscribe/>
         </div>
         <div className="right m-reviews">
-          <h2 className="section-title">See what others have to say</h2>
+          <h2 className="section-title m-middle">See what others have to say</h2>
             <Carousel />
         </div>
       </div>
