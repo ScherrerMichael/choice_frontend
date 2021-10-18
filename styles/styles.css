@@ -200,9 +200,27 @@ html, body{
     color: whitesmoke;
 }
 .schedule-title{
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column: 3;
+    grid-row: 3;
     text-align: left;
     color: orangered;
     font-size: large;
+}
+.location{
+    height: 50%;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: whitesmoke;
+    grid-column: 3;
+    grid-row: 3;
+}
+.location-blurb{
+    grid-column: 3;
+    grid-row: 3;
+    color: whitesmoke;
 }
 .schedule{
     display: grid;
@@ -374,7 +392,6 @@ html, body{
     grid-column: 3;
     grid-row: 1;
     width: 100%;
-
 }
 .button-menu{
     grid-column: 1;
@@ -397,8 +414,6 @@ html, body{
 }
 .landing-left h2{
     grid-column: 1 / 5;
-    /* background-color: black; */
-    /* color: whitesmoke; */
     border-radius: 4px;
     padding: 5px;
     margin-left: 2px;
@@ -516,13 +531,29 @@ html, body{
 }
 
 .schedule-title{
+    grid-column: 2;
+    grid-row: 4;
     text-align: left;
     color: orangered;
     font-size: large;
 }
+.location{
+    position: absolute;
+    top:0;
+    left: 0;
+    color: whitesmoke;
+    grid-column: 2;
+    grid-row: 4;
+}
+.location-blurb{
+    grid-column: 2;
+    grid-row: 4;
+    color: whitesmoke;
+    padding-top: 10px;
+}
 .schedule{
     display: grid;
-    grid-template-columns: minmax(0, fit-content) auto;
+    grid-template-columns: minmax(0, fit-content) auto auto;
     position: relative;
     min-width: 100px;
 }

@@ -43,6 +43,10 @@ export default function Home({ data }) {
             <ScheduleItem day="Sunday" time="8a - 11p" />
           </div>
         </div>
+        <div className="location">
+          <div className="schedule-title">Location</div>
+          <p className="location-blurb">6415 8th Ave NW, Seattle, WA 98107</p>
+        </div>
       </div>
       {/* <Carousel/> */}
       <div className="location-wrapper">
@@ -56,8 +60,6 @@ export default function Home({ data }) {
           <p className="blurb">
             Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
           </p>
-          <h3 className="schedule-title">Location</h3>
-          <p className="blurb">6415 8th Ave NW, Seattle, WA 98107</p>
         </div>
       </div>
       <div className="events-wrapper">
