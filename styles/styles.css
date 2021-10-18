@@ -240,6 +240,40 @@ html, body{
     padding-left: 10px;
 }
 
+
+.location-wrapper{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    background-color: teal;
+    height: 500px;
+}
+.map{
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+}
+.section-title{
+    position: relative;
+    color: orange;
+}
+.blurb{
+    position: relative;
+    height: fit-content;
+    color: whitesmoke;
+}
+.events-wrapper{
+    position: relative;
+    background-color: black;
+    height: 500px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+/* .m-subscribe{
+    grid-row: 2;
+}
+.m-reviews{
+    grid-row: 1;
+} */
 /* Menu */
 
 .menu-wrapper{
@@ -539,7 +573,7 @@ html, body{
 }
 .location{
     position: absolute;
-    top:0;
+    top:0 ;
     left: 0;
     color: whitesmoke;
     grid-column: 2;

@@ -63,13 +63,13 @@ export default function Home({ data }) {
         </div>
       </div>
       <div className="events-wrapper">
-        <div className="left">
+        <div className="left m-subscribe">
           <h2 className="section-title">
             Invested in the Community
           </h2>
           <Subscribe/>
         </div>
-        <div className="right">
+        <div className="right m-reviews">
           <h2 className="section-title">See what others have to say</h2>
             <Carousel />
         </div>
