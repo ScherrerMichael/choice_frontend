@@ -12,25 +12,22 @@ export default function Home({ data }) {
       <Header />
       <div className="landing-wrapper">
         <div className="landing-left">
-          <div className="section left">
             <h2>Delicious Food & Craft Beer</h2>
             <p className="blurb">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available.
             </p>
-          </div>
-        </div>
-        <img className="logo-landing" src="/logo.png" />
         <div className="button-menu">
           <Link
             href="/menu"
           >Menu</Link>
         </div>
+        </div>
+        <img className="logo-landing" src="/logo.png" />
         <div className="store-hours">
           <div className="schedule-title">Store Hours</div>
           <div className="schedule">
-            <ScheduleItem day="Monday - Thursday" time="7a - 12a" />
-            <ScheduleItem day="Friday" time="7a - 1p" />
-            <ScheduleItem day="Saturday" time="8a - 1a" />
-            <ScheduleItem day="Sunday" time="8a - 12a" />
+            <ScheduleItem day="Monday - Thursday" time="8a - 11p" />
+            <ScheduleItem day="Friday - Saturday" time="8a - 12p" />
+            <ScheduleItem day="Sunday" time="8a - 11p" />
           </div>
         </div>
         <div className="rest-hours">
@@ -38,10 +35,13 @@ export default function Home({ data }) {
             Restaurant Hours
           </div>
           <div className="schedule">
-            <ScheduleItem day="Monday - Thursday" time="8a - 11p" />
-            <ScheduleItem day="Friday - Saturday" time="8a - 12a" />
-            <ScheduleItem day="Sunday" time="8a - 11p" />
+            <ScheduleItem day="Monday - Saturday" time="11a - 8:30p" />
+            <ScheduleItem day="Sunday" time="11:30a - 7:30p" />
           </div>
+        </div>
+        <div className="phone">
+          <div className="schedule-title">Telephone</div>
+          <p className="phone-number">(206)-789-0211</p>
         </div>
         <div className="location">
           <div className="schedule-title">Location</div>
@@ -63,9 +63,9 @@ export default function Home({ data }) {
         </div>
       </div>
       <div className="events-wrapper">
-        <div className="left m-subscribe">
+        {/* <div className="left m-subscribe">
           <Subscribe/>
-        </div>
+        </div> */}
         <div className="right m-reviews">
           <h2 className="section-title m-middle">See what others have to say</h2>
             <Carousel />

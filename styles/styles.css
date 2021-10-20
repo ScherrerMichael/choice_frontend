@@ -5,6 +5,7 @@ html, body{
     height: 100%;
     font-weight: bold;
     font-size: 100%!important;
+    font-family: Work Sans;
 }
 
 h2{
@@ -13,6 +14,12 @@ h2{
 
 .description{
     position: relative;
+}
+
+.half{
+    width: 50%;
+    font-size: 80%;
+    margin-top: 0;
 }
 
 /* Container */
@@ -89,8 +96,6 @@ h2{
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, minmax(15px, 1fr));
-    /* grid-template-rows: 50px; */
-    min-height: 60px;
 }
 .footer-left{
     padding-top: 10px;
@@ -132,9 +137,7 @@ h2{
     background-color: black;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, minmax(25%, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-    /* grid-template-rows: repeat(3, 25%); */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-content: center;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7)), url("../public/choice_1.jpg") ;
     background-color: sienna;
@@ -185,7 +188,7 @@ h2{
     margin-top: auto;
     margin-bottom: auto;
     color: whitesmoke;
-    grid-column: 1;
+    grid-column: 1 / 4;
     grid-row: 3;
 }
 .rest-hours{
@@ -194,8 +197,8 @@ h2{
     margin-top: auto;
     margin-bottom: auto;
     color: whitesmoke;
-    grid-column: 2;
-    grid-row: 3;
+    grid-column: 1/ 4;
+    grid-row: 4;
 }
 .landing-left h2{
     border-radius: 4px;
@@ -213,7 +216,7 @@ h2{
     margin-bottom: auto;
     grid-column: 3;
     grid-row: 3;
-    text-align: left;
+    text-align: center;
     color: orangered;
     font-size: large;
 }
@@ -223,32 +226,32 @@ h2{
     margin-top: auto;
     margin-bottom: auto;
     color: whitesmoke;
-    grid-column: 3;
-    grid-row: 3;
+    grid-column: 1 / 4;
+    grid-row: 5;
 }
 .location-blurb{
-    width: 50%;
-    font-size: medium;
-    grid-column: 3;
-    grid-row: 3;
+    text-align: center;
+    font-size: 3vw;
     color: whitesmoke;
 }
 .schedule{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 5px;
     position: relative;
-    min-width: 100px;
 }
 
 .schedule .day{
-    width: 100%;
+    grid-column: 2;
+    font-size: 3vw;
     position: relative;
     margin-bottom: 5px;
-    font-size: medium;
 }
 .schedule .time{
-    width: 100%;
-    padding-left: 10px;
+    grid-column: 3;
+    font-size: 3vw;
+    /* width: 100%; */
+    /* padding-left: 10px; */
 }
 
 
@@ -257,6 +260,15 @@ h2{
     grid-template-rows: 50% 50%;
     background-color: teal;
     height: 500px;
+}
+.phone{
+    grid-column: 2;
+    grid-row: 6;
+    padding: 10px;
+}
+.phone-number{
+    text-align: center;
+    color: whitesmoke;
 }
 .map{
     grid-column: 1;
@@ -275,9 +287,6 @@ h2{
 .events-wrapper{
     position: relative;
     background-color: black;
-    height: 500px;
-    display: grid;
-    grid-template-rows: 50% 50%;
 }
 .right{
     text-align: center;
@@ -309,8 +318,8 @@ h2{
     color: whitesmoke;
     padding-left: 20px;
 }
-/* .carousel-slider{
-    height: 100%;
+.carousel-slider{
+    /* height: 100%; */
 }
 
 .slider{
@@ -320,10 +329,10 @@ h2{
 .carousel-root{
     box-sizing: border-box;
     height: 90%;
-} */
+}
 
 .control-dots{
-    background-color: black;
+    /* background-color: black; */
 }
 /* .slide div{
     height: 100% !important;
@@ -332,6 +341,7 @@ h2{
 .review{
     background-color: whitesmoke;
     color: gray;
+    min-height: 300px;
 }
 
 /*  Menu Mobile */
@@ -518,21 +528,17 @@ h2{
     position: relative;
     color: whitesmoke;
 }
-.carousel-slider{
-    height: 100%;
-}
-
 .slider{
-    height: 400px !important;
+    /* height: 400px !important; */
 }
 
 .carousel-root{
     box-sizing: border-box;
-    height: 90%;
+    /* height: 90%; */
 }
 
 .control-dots{
-    background-color: black;
+    /* background-color: black; */
 }
 .slide div{
     height: 100% !important;
@@ -552,16 +558,13 @@ h2{
     color: orange;
 }
 .blurb{
+    text-align: left;
     font-size: 1.3rem;
     position: relative;
     height: fit-content;
     color: whitesmoke;
 }
 
-.review{
-    background-color: whitesmoke;
-    color: gray;
-}
 
 .left{
     text-align: left;
@@ -634,6 +637,11 @@ h2{
     color: orangered;
     font-size: large;
 }
+.phone{
+    grid-column: 1;
+    grid-row: 4;
+    padding: 10px;
+}
 .location{
     position: absolute;
     top:0 ;
@@ -644,7 +652,7 @@ h2{
 }
 .schedule{
     display: grid;
-    grid-template-columns: minmax(0, fit-content) auto auto;
+    grid-template-columns: minmax(fit-content, fit-content) auto auto;
     position: relative;
     min-width: 100px;
 }
@@ -674,13 +682,6 @@ h2{
     background-color: gray;
     color: whitesmoke;
 }
-/* input, select, textarea{
-    color: #ff0000;
-}
-
-textarea:focus, input:focus {
-    color: #ff0000;
-} */
 
 .subscribe-text-large{
     color: whitesmoke;
@@ -704,6 +705,14 @@ textarea:focus, input:focus {
     bottom: 20px;
     border: tomato 2px solid;
     border-radius: 10px;
+}
+.m-reviews{
+    height: 100%;
+}
+
+.review{
+    background-color: whitesmoke;
+    color: gray;
 }
 
 /* Menu */
