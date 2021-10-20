@@ -12,14 +12,14 @@ export default function Home({ data }) {
       <Header />
       <div className="landing-wrapper">
         <div className="landing-left">
-            <h2>Delicious Food & Craft Beer</h2>
-            <p className="blurb">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available.
-            </p>
-        <div className="button-menu">
-          <Link
-            href="/menu"
-          >Menu</Link>
-        </div>
+          <h2>Delicious Food & Craft Beer</h2>
+          <p className="blurb">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available.
+          </p>
+          <div className="button-menu">
+            <Link
+              href="/menu"
+            >Menu</Link>
+          </div>
         </div>
         <img className="logo-landing" src="/logo.png" />
         <div className="store-hours">
@@ -47,30 +47,30 @@ export default function Home({ data }) {
           <div className="schedule-title">Location</div>
           <p className="location-blurb">6415 8th Ave NW, Seattle, WA 98107</p>
         </div>
-      </div>
-      {/* <Carousel/> */}
-      <div className="location-wrapper">
-        <div className="map">
-          <MapContainer />
+        <div className="location-wrapper">
+          <div className="map">
+            <MapContainer />
+          </div>
+          <div className="right">
+            <h2 className="section-title m-middle">Grab And Go / Sip And Relax</h2>
+            <p className="blurb">Pick up an espresso in the morning before work, or do some after-work unwinding by trying out a new locally brewed beer. Or Both.The Choice is yours in Ballard. </p>
+            <p className="blurb">(We also have a convience store for everything else in between.)</p>
+            <p className="blurb">
+              Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
+            </p>
+          </div>
         </div>
-        <div className="right">
-          <h2 className="section-title m-middle">Grab And Go / Sip And Relax</h2>
-          <p className="blurb">Pick up an espresso in the morning before work, or do some after-work unwinding by trying out a new locally brewed beer. Or Both.The Choice is yours in Ballard. </p>
-          <p className="blurb">(We also have a convience store for everything else in between.)</p>
-          <p className="blurb">
-            Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
-          </p>
-        </div>
-      </div>
-      <div className="events-wrapper">
-        {/* <div className="left m-subscribe">
+        <div className="events-wrapper">
+          {/* <div className="left m-subscribe">
           <Subscribe/>
         </div> */}
-        <div className="right m-reviews">
-          <h2 className="section-title m-middle">See what others have to say</h2>
+          <div className="right m-reviews">
+            <h2 className="section-title m-middle">See what others have to say</h2>
             <Carousel />
+          </div>
         </div>
       </div>
+      {/* <Carousel/> */}
       <Footer />
     </div>
   )
@@ -93,7 +93,7 @@ class ScheduleItem extends Component {
       <>
         <div className="day">{day}:
         </div>
-          <div className="time">{time}</div>
+        <div className="time">{time}</div>
       </>
     );
   }
