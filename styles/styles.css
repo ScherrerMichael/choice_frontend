@@ -231,7 +231,7 @@ h2{
 }
 .location-blurb{
     text-align: center;
-    font-size: 3vw;
+    font-size: 1.5vw;
     color: whitesmoke;
 }
 .schedule{
@@ -254,7 +254,6 @@ h2{
     /* padding-left: 10px; */
 }
 
-
 .location-wrapper{
     display: grid;
     grid-template-rows: 50% 50%;
@@ -267,7 +266,7 @@ h2{
     padding: 10px;
 }
 .phone-number{
-    text-align: center;
+    text-align: left;
     color: whitesmoke;
 }
 .map{
@@ -652,21 +651,22 @@ h2{
 }
 .schedule{
     display: grid;
-    grid-template-columns: minmax(fit-content, fit-content) auto auto;
+    grid-template-columns: minmax(0, 1fr);
     position: relative;
-    min-width: 100px;
 }
 
 .schedule .day{
+    grid-column: 1;
+    font-size: 1.5vw;
+    position: relative;
+    margin-bottom: 5px;
+}
+.schedule .time{
+    grid-column: 2;
     width: 100%;
     position: relative;
     margin-bottom: 5px;
     font-size: smaller;
-}
-.schedule .time{
-    width: 100%;
-    padding-left: 10px;
-    text-align: left;
 }
 
 #form-label{
