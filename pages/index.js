@@ -55,9 +55,9 @@ export default function Home({ data }) {
             <h2 className="section-title m-middle">Grab And Go / Sip And Relax</h2>
             <p className="blurb">Pick up an espresso in the morning before work, or do some after-work unwinding by trying out a new locally brewed beer. Or Both.The Choice is yours in Ballard. </p>
             <p className="blurb">(We also have a convience store for everything else in between.)</p>
-            <p className="blurb">
+            {/* <p className="blurb">
               Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="events-wrapper">

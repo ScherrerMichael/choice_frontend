@@ -6,15 +6,15 @@ const {publicRuntimeConfig} = getConfig()
 const {MAPS_API_KEY} = publicRuntimeConfig
 
 const mapStyles = {
-  height: '100%',
+  height: '90%',
+  width: '90%',
+  marginLeft: '20px',
+  marginTop: 'auto',
+  marginBottom: 'auto',
+  borderRadius: '20px',
 };
 
 const containerStyle = {
-  // position: 'absolute',
-  // width: '80%',
-  // height: '80%',
-  // left: '10%',
-  // top: '10%',
 }
 
 export class MapContainer extends Component {
