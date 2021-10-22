@@ -15,12 +15,17 @@ export default function Home({ data }) {
           <h2>Delicious Food & Craft Beer</h2>
           <p className="blurb">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available.
           </p>
+        </div>
           <div className="button-menu">
             <Link
               href="/menu"
             >Menu</Link>
           </div>
-        </div>
+          <div className="button-grubhub">
+            <Link
+            href="https://www.ubereats.com/store/choice-teriyaki/mMYRIOt6TvygZ585XkT8qQ?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkNob2ljZSUyMERlbGklMjAlMjYlMjBHcm9jZXJ5JTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNDVjYzQzMWYtMmEwNC1iZjU1LTU2MmUtZjZiMWM2ODJjZTc4JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0Ny42NzU4MDY3JTJDJTIybG9uZ2l0dWRlJTIyJTNBLTEyMi4zNjYzNDMzJTdE"
+            >GrubHub</Link>
+          </div>
         <img className="logo-landing" src="/logo.png" />
         <div className="store-hours">
           <div className="schedule-title">Store Hours</div>
@@ -53,7 +58,7 @@ export default function Home({ data }) {
           </div>
           <div className="right">
             <h2 className="section-title m-middle">Grab And Go / Sip And Relax</h2>
-            <p className="blurb">Pick up an espresso in the morning before work, or do some after-work unwinding by trying out a new locally brewed beer. Or Both.The Choice is yours in Ballard. </p>
+            <p className="blurb">Pick up an espresso in the morning before work, or do some after-work unwinding by trying out a new locally brewed beer. Or Both. The Choice is yours in Ballard. </p>
             <p className="blurb">(We also have a convience store for everything else in between.)</p>
             {/* <p className="blurb">
               Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
