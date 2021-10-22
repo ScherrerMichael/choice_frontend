@@ -658,9 +658,11 @@ h2{
 
 
 .phone{
-    text-align:center;
     grid-column: 1;
     grid-row: 3;
+}
+.phone-number{
+    text-align: left;
 }
 
 .map{
