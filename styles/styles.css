@@ -381,6 +381,13 @@ h2{
     color: gray;
     min-height: 300px;
 }
+.review p{
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    vertical-align: middle;
+    display: table-cell;
+}
 
 /*  Menu Mobile */
 .menu-wrapper{
@@ -592,15 +599,18 @@ h2{
     /* background-color: black; */
 }
 .slide div{
-    height: 100% !important;
+    height: 50% !important;
     padding: 10px;
 }
 .review p{
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 100px;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     vertical-align: middle;
     display: table-cell;
+}
+.legend{
+    /* bottom: 0 !important; */
 }
 
 .location-wrapper{
