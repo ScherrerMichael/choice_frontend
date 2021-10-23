@@ -14,52 +14,55 @@ class Header extends Component {
         return (<>
             <div className="navBar">
                 <div className="logo-header">
-                <Link
-                href="/"
+                    <Link
+                        href="/"
+                    >
+                        <a>
+                            <img
+                                height={65}
+                                width={45}
+                                src="/logo.png"
+                                alt="Logo of Choice Deli"
+                            ></img>
+                        </a>
+                    </Link>
+                </div>
+                <input type="checkbox" id="nav-menu1" onClick={this.Toggle}/>
+                <label id="nav-icon1" for="nav-menu1">
+                <span></span>
+                <span></span>
+                <span></span>
+                </label>
+                <div className={this.state.toggle?"show-nav": "nav-links"}>
+                <div className="link">
+                <Link href="/"
+                onClick={this.Toggle}
                 >
-                    <a>
-                    <img
-                        height={65}
-                        width={45}
-                        src="/logo.png"
-                        alt="Logo of Choice Deli"
-                    ></img>
-                    </a>
+                <a>Home</a>
                 </Link>
                 </div>
-                <button className="hamburger" onClick={this.Toggle}>
-                    placeholder
-                </button>
-            <div className={this.state.toggle? "show-nav" : "nav-links"}>
-                <div className="link">
-                    <Link href="/"
-                    onClick={this.Toggle}
-                    >
-                        <a>Home</a>
-                    </Link>
+                <div className="link" href="#">
+                <Link href="/menu"
+                onClick={this.Toggle}
+                >
+                <a>Menu</a>
+                </Link>
                 </div>
                 <div className="link" href="#">
-                    <Link href="/menu"
-                    onClick={this.Toggle}
-                    >
-                        <a>Menu</a>
-                    </Link>
+                <Link href="/events"
+                onClick={this.Toggle}
+                >
+                <a>Events</a>
+                </Link>
                 </div>
                 <div className="link" href="#">
-                    <Link href="/events"
-                    onClick={this.Toggle}
-                    >
-                        <a>Events</a>
-                    </Link>
+                <Link href="/#to-schedule"
+                onClick={this.Toggle}
+                >
+                <a>Contact</a>
+                </Link>
                 </div>
-                <div className="link" href="#">
-                    <Link href="/#to-schedule"
-                    onClick={this.Toggle}
-                    >
-                        <a>Contact</a>
-                    </Link>
                 </div>
-            </div>
             </div>
         </>
         );
