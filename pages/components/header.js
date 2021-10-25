@@ -33,7 +33,7 @@ class Header extends Component {
                     <span></span>
                     <span></span>
                 </label>
-                <div className={this.state.toggle ? "show-nav" : "nav-links"}>
+                <div id="nav-links">
                     <div className="link">
                         <Link href="/"
                             onClick={this.Toggle}
