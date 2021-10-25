@@ -27,41 +27,41 @@ class Header extends Component {
                         </a>
                     </Link>
                 </div>
-                <input type="checkbox" id="nav-menu1" onClick={this.Toggle}/>
+                <input type="checkbox" id="nav-menu1" onClick={this.Toggle} />
                 <label id="nav-icon1" for="nav-menu1">
-                <span></span>
-                <span></span>
-                <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </label>
-                <div className={this.state.toggle?"show-nav": "nav-links"}>
-                <div className="link">
-                <Link href="/"
-                onClick={this.Toggle}
-                >
-                <a>Home</a>
-                </Link>
-                </div>
-                <div className="link" href="#">
-                <Link href="/menu"
-                onClick={this.Toggle}
-                >
-                <a>Menu</a>
-                </Link>
-                </div>
-                <div className="link" href="#">
-                <Link href="/events"
-                onClick={this.Toggle}
-                >
-                <a>Events</a>
-                </Link>
-                </div>
-                <div className="link" href="#">
-                <Link href="/#to-schedule"
-                onClick={this.Toggle}
-                >
-                <a>Contact</a>
-                </Link>
-                </div>
+                <div className={this.state.toggle ? "show-nav" : "nav-links"}>
+                    <div className="link">
+                        <Link href="/"
+                            onClick={this.Toggle}
+                        >
+                            <a>Home</a>
+                        </Link>
+                    </div>
+                    <div className="link" href="#">
+                        <Link href="/menu"
+                            onClick={this.Toggle}
+                        >
+                            <a>Menu</a>
+                        </Link>
+                    </div>
+                    <div className="link" href="#">
+                        <Link href="/events"
+                            onClick={this.Toggle}
+                        >
+                            <a>Events</a>
+                        </Link>
+                    </div>
+                    <div className="link" href="#">
+                        <Link href="/#to-schedule"
+                            onClick={this.Toggle}
+                        >
+                            <a>Contact</a>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </>
