@@ -5,9 +5,11 @@ import Header from './components/header'
 export default function Menu({ data }) {
     return (
         <>
+            <div className="container">
             <Header />
-            <div> hello </div>
+                <div> hello </div>
             <Footer />
+            </div>
         </>
     );
 }
