@@ -231,6 +231,11 @@ input[type="checkbox"]{
 
 }
 .button-menu{
+    cursor: pointer;
+    text-decoration: none;
+    color: whitesmoke;
+    line-height: 50px;
+    vertical-align: middle;
     margin: 10px;
     grid-column: 2;
     grid-row: 3;
@@ -244,13 +249,12 @@ input[type="checkbox"]{
     border: var(--color-accent) 2px solid;
 }
 
-.button-menu a{
+.button-grubhub{
+    cursor: pointer;
     text-decoration: none;
     color: whitesmoke;
     line-height: 50px;
     vertical-align: middle;
-}
-.button-grubhub{
     margin: 10px;
     grid-column: 2;
     grid-row: 4;
@@ -263,12 +267,7 @@ input[type="checkbox"]{
     text-align: center;
     border: var(--color-accent) 2px solid;
 }
-.button-grubhub a{
-    text-decoration: none;
-    color: whitesmoke;
-    line-height: 50px;
-    vertical-align: middle;
-}
+
 .store-hours{
     margin-top: auto;
     padding: 10px;
@@ -596,14 +595,14 @@ input[type="checkbox"]{
 .button-menu{
     text-decoration: none;
     color: whitesmoke;
-    line-height: 75px;
+    line-height: 90px;
     vertical-align: middle;
     grid-column: 1;
     grid-row: 2;
     margin: auto auto auto 10px;
     background-color: black;
     width: 90%;
-    height: 75px;
+    height: 90px;
     border-radius: 5px;
     text-align: center;
     border: var(--color-accent) 2px solid;
@@ -611,14 +610,14 @@ input[type="checkbox"]{
 .button-grubhub{
     text-decoration: none;
     color: whitesmoke;
-    line-height: 75px;
+    line-height: 90px;
     vertical-align: middle;
     grid-column: 1;
     grid-row: 3;
     margin: auto auto auto 10px;
     background-color: black;
     width: 90%;
-    height: 75px;
+    height: 90px;
     border-radius: 5px;
     text-align: center;
     border: var(--color-accent) 2px solid;
@@ -627,7 +626,7 @@ input[type="checkbox"]{
     text-align: left;
     padding: 5px;
     margin-left: 2px;
-    margin-top: 0;
+    margin-top: 10px;
     color: var(--color-accent);
 }
 
