@@ -594,6 +594,10 @@ input[type="checkbox"]{
     width: 100%;
 }
 .button-menu{
+    text-decoration: none;
+    color: whitesmoke;
+    line-height: 75px;
+    vertical-align: middle;
     grid-column: 1;
     grid-row: 2;
     margin: auto auto auto 10px;
@@ -604,13 +608,11 @@ input[type="checkbox"]{
     text-align: center;
     border: var(--color-accent) 2px solid;
 }
-.button-menu a{
+.button-grubhub{
     text-decoration: none;
     color: whitesmoke;
     line-height: 75px;
     vertical-align: middle;
-}
-.button-grubhub{
     grid-column: 1;
     grid-row: 3;
     margin: auto auto auto 10px;
@@ -620,12 +622,6 @@ input[type="checkbox"]{
     border-radius: 5px;
     text-align: center;
     border: var(--color-accent) 2px solid;
-}
-.button-grubhub a{
-    text-decoration: none;
-    color: whitesmoke;
-    line-height: 75px;
-    vertical-align: middle;
 }
 .landing-left h2{
     text-align: left;
