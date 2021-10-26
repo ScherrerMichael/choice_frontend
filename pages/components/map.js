@@ -11,7 +11,6 @@ const mapStyles = {
   marginLeft: '20px',
   marginTop: 'auto',
   marginBottom: 'auto',
-  borderRadius: '20px',
 };
 
 const containerStyle = {
