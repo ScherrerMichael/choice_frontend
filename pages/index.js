@@ -13,7 +13,7 @@ export default function Home({ data }) {
       <div className="landing-wrapper">
         <div className="landing-left">
           <h2>Delicious Food & Craft Beer</h2>
-          <p className="blurb">Hungry? Come try our signature teriyaki, and combination meals. Online delivery, and phone order pick-up available.
+          <p className="blurb">Hungry? Come try our signature teriyaki and combination meals. Online delivery, and phone order pick-up available.
           </p>
         </div>
           <div className="button-menu">
@@ -58,14 +58,15 @@ export default function Home({ data }) {
           </div>
           <div className="right">
             <h2 className="section-title m-middle">Grab And Go / Sip And Relax</h2>
-            <p className="blurb">Pick up an espresso in the morning before work, or do some after-work unwinding by trying out a new locally brewed beer. Or Both. The Choice is yours in Ballard. </p>
+            <p className="blurb">Pick up an espresso in the morning before work, or do some after-work unwinding and try a new local beer. Or Both! The Choice is yours in Ballard. </p>
             <p className="blurb">(We also have a convience store for everything else in between.)</p>
+            <p className="blurb">We sell kegs too! must be ordered on or before Tuesday.</p>
             {/* <p className="blurb">
               Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
             </p> */}
           </div>
         </div>
-        <div className="events-wrapper">
+        <div className="review-wrapper">
           {/* <div className="left m-subscribe">
           <Subscribe/>
         </div> */}

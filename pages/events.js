@@ -7,7 +7,11 @@ export default function Menu({ data }) {
         <>
             <div className="container">
             <Header />
-                <div> hello </div>
+            <div className="events-wrapper">
+                {/* <div className="events">
+                    hello
+                </div> */}
+            </div>
             <Footer />
             </div>
         </>

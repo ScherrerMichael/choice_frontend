@@ -48,20 +48,20 @@ class Header extends Component {
                             <a>Menu</a>
                         </Link>
                     </div>
-                    <div className="link" href="#">
+                    {/* <div className="link" href="#">
                         <Link href="/events"
                             onClick={this.Toggle}
                         >
                             <a>Events</a>
                         </Link>
-                    </div>
-                    <div className="link" href="#">
+                    </div> */}
+                    {/* <div className="link" href="#">
                         <Link href="/#to-schedule"
                             onClick={this.Toggle}
                         >
                             <a>Contact</a>
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

@@ -372,7 +372,7 @@ input[type="checkbox"]{
     height: fit-content;
     color: whitesmoke;
 }
-.events-wrapper{
+.review-wrapper{
     grid-column: 1 / 4;
     grid-row: 10;
     position: relative;
@@ -707,7 +707,7 @@ input[type="checkbox"]{
     padding: 10px;
 }
 
-.events-wrapper{
+.review-wrapper{
     grid-row: 6;
     opacity: 0.9;
     position: relative;
@@ -898,6 +898,25 @@ input[type="checkbox"]{
     grid-column: 5;
     height: 100%;
     background-color: whitesmoke;
+}
+
+/* Events */
+
+.events-wrapper{
+    background-color: black;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 60% minmax(0, 1fr);
+    justify-content: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7)), url("../public/choice_3.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.events{
+    grid-column: 2;
+    background-color: violet;
 }
 
 }
