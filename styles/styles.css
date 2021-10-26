@@ -209,9 +209,10 @@ input[type="checkbox"]{
     grid-template-rows: minmax(10%, 20%);
     justify-content: center;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7)), url("../public/choice_1.jpg") ;
+    background-position: 0, -1000px;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 700px;
+    min-height: 100vh;
 }
 .landing-left{
     padding-top: 20px;
@@ -575,9 +576,10 @@ input[type="checkbox"]{
     grid-template-columns: repeat(3, 25%);
     grid-template-rows: minmax(fit-content, 18%);
     justify-content: center;
+    background-position: 10%;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7)), url("../public/choice_1.jpg") ;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     min-height: 700px;
 }
 .landing-left{
