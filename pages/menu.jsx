@@ -1,4 +1,6 @@
-import React, { Children, Component, createRef } from 'react';
+import React, {Component, createRef } from 'react';
+import MenuItem from './components/menuItem';
+import ItemType from './components/itemType';
 import Footer from './components/footer'
 import Header from './components/header'
 
@@ -134,27 +136,6 @@ export default function Menu({ data }) {
     );
 }
 
-class ItemType extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: String,
-            parenthesis: String,
-        }
-    }
-    render() {
-        const {
-            name,
-            parenthesis,
-        } = this.props
-        return (
-            <div ref={this.props.refProp} className="item-type">
-                <strong>{name}</strong>
-                <span className="group-par">{parenthesis}</span>
-            </div>
-        );
-    }
-}
 //wrapper component
 const ItemGroup = (props) => {
     return props.text ? (
@@ -183,88 +164,3 @@ const MenuDescription = (props) => {
         </>
     )
 }
-
-class MenuItem extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: String,
-            price: String,
-            description: String,
-        }
-    }
-    render() {
-        const {
-            name,
-            price,
-            description,
-        } = this.props
-        return (
-            <div className="item">
-                <div className="item-name">{name}</div>
-                <div className="item-price">{price}</div>
-                {description ?
-                    <div className="item-description">
-                        {description}
-                    </div> :
-                    <>
-                    </>}
-            </div>
-        );
-    }
-}
-
-// function comapare_name(a, b) {
-//     if (a.name.toLowerCase() < b.catagory.toLowerCase()) {
-//         return -1;
-//     }
-//     if (a.name.toLowerCase() > b.catagory.toLowerCase()) {
-//         return -1;
-//     }
-//     return 0;
-// }
-
-// function getCatagoryFoods(cat, data) {
-//     let result = []
-//     for (let i in data) {
-//         if (data[i].catagory === cat) {
-//             // console.log(data[i])
-//             result.push(data[i]);
-//         }
-//     }
-//     return result;
-// }
-
-// export async function getStaticProps(content) {
-//     try{
-//     const res = await fetch(process.env.API_ROUTE + '/foodItems')
-//     const data = await res.json()
-//     data.sort(comapare_name);
-//     //   console.log(data);
-//     const appetizers = getCatagoryFoods("Appetizer", data);
-//     const entrees = getCatagoryFoods("Entree", data);
-//     const kfc = getCatagoryFoods("KFC", data);
-//     const combinations = getCatagoryFoods("Combinations", data)
-//     const teriyaki = getCatagoryFoods("Teriyaki", data)
-//     const specials = getCatagoryFoods("Specials", data)
-
-//     if (!data){
-//         return {notFound: true};
-//     }
-
-//     return {
-//         props: { data :
-//         {
-//             appetizers,
-//             kfc,
-//             entrees,
-//             teriyaki,
-//             combinations,
-//             specials,
-
-//         }}, //will be passed to the page
-//     }
-//     } catch(e) {
-//         return {notFound: true};
-//     }
-// }

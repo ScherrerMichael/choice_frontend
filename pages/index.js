@@ -4,7 +4,7 @@ import Header from './components/header'
 import React, { Component } from 'react';
 import MapContainer from './components/map';
 import Carousel from './components/carousel'
-import Subscribe from './components/subscribe'
+import ScheduleItem from './components/scheduleItem';
 
 export default function Home({ data }) {
   return (
@@ -61,15 +61,9 @@ export default function Home({ data }) {
             <p className="blurb">Pick up an espresso in the morning before work, or do some after-work unwinding and try a new local beer. Or Both! The Choice is yours in Ballard. </p>
             <p className="blurb">(We also have a convience store for everything else in between.)</p>
             <p className="blurb">We sell kegs too! must be ordered on or before Tuesday.</p>
-            {/* <p className="blurb">
-              Large selection of drinks from wine, craft beer from local breweries, and kegs to order (kegs must be ordered on or before tuesday).
-            </p> */}
           </div>
         </div>
         <div className="review-wrapper">
-          {/* <div className="left m-subscribe">
-          <Subscribe/>
-        </div> */}
           <div className="right m-reviews">
             <h2 className="section-title m-middle">See what others have to say</h2>
             <Carousel />
@@ -80,27 +74,4 @@ export default function Home({ data }) {
       <Footer />
     </div>
   )
-}
-
-class ScheduleItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      day: String,
-      time: String,
-    }
-  }
-  render() {
-    const {
-      day,
-      time,
-    } = this.props
-    return (
-      <>
-        <div className="day">{day}:
-        </div>
-        <div className="time">{time}</div>
-      </>
-    );
-  }
 }
