@@ -28,7 +28,7 @@ class Header extends Component {
                     </Link>
                 </div>
                 <input type="checkbox" id="nav-menu1" onClick={this.Toggle} />
-                <label id="nav-icon1" for="nav-menu1">
+                <label id="nav-icon1" htmlFor="nav-menu1">
                     <span></span>
                     <span></span>
                     <span></span>

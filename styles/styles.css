@@ -203,14 +203,15 @@ input[type="checkbox"]{
 /* Landing Page mobile*/
 
 .landing-wrapper{
-    background-color: black;
+    background-image: url("/choice_1.jpg");
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.7);
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: minmax(10%, 20%);
     justify-content: center;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7)), url("../public/choice_1.jpg") ;
-    background-position: 0, -1000px;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -228,8 +229,8 @@ input[type="checkbox"]{
 .logo-landing{
     grid-column: 2;
     grid-row: 1;
-    width: 325px;
-    height: 490px;
+    width: 100%;
+    height: 100%;
 
 }
 .button-menu{
@@ -569,14 +570,15 @@ input[type="checkbox"]{
 @media screen and (min-width: 768px) {
 /* landing */
 .landing-wrapper{
-    background-color: black;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 25%);
     grid-template-rows: minmax(fit-content, 18%);
     justify-content: center;
     background-position: 10%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7)), url("../public/choice_1.jpg") ;
+    background-image: url("/choice_1.jpg");
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.7);
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
     min-height: 700px;
@@ -590,8 +592,8 @@ input[type="checkbox"]{
 .logo-landing{
     position: relative;
     grid-column: 3;
-    grid-row: 1 / span;
     width: 100%;
+    height: 100%;
 }
 .button-menu{
     text-decoration: none;
