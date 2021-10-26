@@ -23,7 +23,7 @@ export default function Home({ data }) {
           </Link>
           <Link href="https://www.ubereats.com/store/choice-teriyaki/mMYRIOt6TvygZ585XkT8qQ?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkNob2ljZSUyMERlbGklMjAlMjYlMjBHcm9jZXJ5JTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNDVjYzQzMWYtMmEwNC1iZjU1LTU2MmUtZjZiMWM2ODJjZTc4JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0Ny42NzU4MDY3JTJDJTIybG9uZ2l0dWRlJTIyJTNBLTEyMi4zNjYzNDMzJTdE">
         <div className="button-grubhub">
-        GrubHub
+        UberEats
         </div>
           </Link>
         <img className="logo-landing" src="/logo.png" />
