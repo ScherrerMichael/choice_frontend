@@ -16,6 +16,7 @@ html, body{
     font-weight: bold;
     font-size: 100%!important;
     font-family: Work Sans;
+    font-display: swap;
 }
 
 h2{
@@ -227,7 +228,8 @@ input[type="checkbox"]{
 .logo-landing{
     grid-column: 2;
     grid-row: 1;
-    width: 100%;
+    width: 325px;
+    height: 490px;
 
 }
 .button-menu{
